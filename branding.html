@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Why GCS</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h2, h3 {
+      color: #003366;
+    }
+
+    .text-box {
+      background-color: #e6f0fa;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+ .tiles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .tile {
+      background-color: #e8f1f5;
+      border-radius: 6px;
+      padding: 1rem;
+      flex: 1 1 220px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .tile img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+    .tile h3 {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #003b4c;
+    }
+    .tile a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #005f83;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+        <a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+        <a href="internal.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media & External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships & Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+        <a href="media-and-external-affairs.html">External Affairs</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="directory.html">Department Directory</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+        <a href="how-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+ <main>
+<section>
+<h2>Branding and Visual Identity</h2>
+<p>Consistent branding helps audiences recognise and trust Tasmanian Government communication. Each department may have slight variations, but all should follow the central government standards.</p>
+<p>The <strong>official TasGov Communications site</strong> is the source of truth for logos and identity:</p>
+<ul>
+<li><a href="https://www.tas.gov.au/communications" target="_blank">TasGov Communications Toolbox</a></li>
+<li><a href="https://www.tas.gov.au/communications/toolbox/tasmanian-government-logos" target="_blank">Government Logos and Style</a></li>
+</ul>
+<p>This page also acts as a home for cross-agency visual resources. Departments are encouraged to upload or share their branding kits and assets so they can be linked here. Placeholder logos are currently used where official kits aren’t available.</p>
+<p>To add or update your agency's visual assets, contact the Comms Assist team via <a href="mailto:commsassist@dpac.tas.gov.au">commsassist@dpac.tas.gov.au</a>.</p>
+</section>
+<section>
+<h2>Department Branding Tiles</h2>
+<div class="tiles">
+<div class="tile" style="background-color: #dbeaf0;">
+<img alt="Department of Health logo" src="assets/logos/health.png"/>
+<h3>Department of Health</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #e6f0ec;">
+<img alt="Department of State Growth logo" src="assets/logos/stategrowth.png"/>
+<h3>State Growth</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #e2eef3;">
+<img alt="DPAC logo" src="assets/logos/dpac.png"/>
+<h3>Premier &amp; Cabinet (DPAC)</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #f1f6f9;">
+<img alt="Education and Children logo" src="assets/logos/decyp.png"/>
+<h3>Education, Children &amp; Young People</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #f5f5f5;">
+<img alt="Department of Justice logo" src="assets/logos/justice.png"/>
+<h3>Department of Justice</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #ecf3f9;">
+<img alt="Macquarie Point logo" src="assets/logos/mpdc.png"/>
+<h3>MPDC (Macquarie Point)</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #f0f5f0;">
+<img alt="Treasury and Finance logo" src="assets/logos/treasury.png"/>
+<h3>Treasury &amp; Finance</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #eef6ef;">
+<img alt="Natural Resources &amp; Environment Tasmania logo" src="assets/logos/nre.png"/>
+<h3>NRE Tasmania</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #ddeaf1;">
+<img alt="Police, Fire &amp; Emergency logo" src="assets/logos/dpfem.png"/>
+<h3>Police, Fire &amp; Emergency</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #eaf4ea;">
+<img alt="TasTAFE logo" src="assets/logos/tastafe.png"/>
+<h3>TasTAFE</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #e3f0f2;">
+<img alt="Tourism Tasmania logo" src="assets/logos/tourism.png"/>
+<h3>Tourism Tasmania</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #f1f1f1;">
+<img alt="Brand Tasmania logo" src="assets/logos/brandtas.png"/>
+<h3>Brand Tasmania</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #e9eef4;">
+<img alt="Environment Protection Authority logo" src="assets/logos/epa.png"/>
+<h3>Environment Protection Authority</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #f2f8f6;">
+<img alt="Homes Tasmania logo" src="assets/logos/homestas.png"/>
+<h3>Homes Tasmania</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #eaf0f2;">
+<img alt="Royal Tasmanian Botanical Gardens logo" src="assets/logos/rtbg.png"/>
+<h3>Royal Tasmanian Botanical Gardens</h3>
+<a href="#">View Assets</a>
+</div>
+<div class="tile" style="background-color: #e6f0fa;">
+<img alt="Stadiums Tasmania logo" src="assets/logos/stadiumstas.png"/>
+<h3>Stadiums Tasmania</h3>
+<a href="#">View Assets</a>
+</div>
+</div>
+</section>
+</main>
+
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>

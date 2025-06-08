@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comms Assist | TasGov Communications Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #e6f0fa; 
+  min-width: 180px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 1000;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  display: block;
+  color: #003366;
+  background-color: #e6f0fa; 
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #E6F0FA; 
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .button-grid a {
+      flex: 1 1 200px;
+      text-align: center;
+      padding: 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .mcom { background-color: #00274D; }
+    .campaigns { background-color: #3b5f8a; }
+    .insight { background-color: #457a5b; }
+    .evaluation { background-color: #566d99; }
+    .branding { background-color: #3f6fa0; }
+    .media { background-color: #6a5acd; }
+    .directory { background-color: #2F4F4F; }
+    .internal { background-color: #556b6f; }
+    .about { background-color: #708090; }
+
+    .community-button {
+      display: block;
+      width: 96.5%;
+      text-align: center;
+      padding: 1rem;
+      background-color: #009688;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+        <a href="mcom.html">MCOM</a>
+<a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+  <a href="internal.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media &amp; External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships &amp; Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="directory.html">Department Directory</a>
+      
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+<a href="How-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <h2>Welcome to Comms Assist</h2>
+      <p>This toolkit was created to support Tasmanian Government communications professionals with consistent, collaborative and high-impact guidance. Based on the proven UK Government Communication Service (GCS) frameworks, it has been adapted to suit Tasmania’s unique environment — with a focus on modern, strategic, and audience-first public sector communication.</p>
+
+      <div class="button-grid">
+        <a class="mcom" href="mcom.html">MCOM</a>
+        <a class="campaigns" href="campaigns.html">Strategic Communications</a>
+        <a class="insight" href="insight.html">Insight</a>
+        <a class="evaluation" href="evaluation.html">Evaluation</a>
+        <a class="branding" href="branding.html">Branding</a>
+        <a class="media" href="media-and-external-affairs.html">External Affairs</a>
+        <a class="directory" href="directory.html">Directory</a>
+        <a class="internal" href="internal.html">Internal Comms</a>
+        <a class="about" href="about.html">About</a>
+      </div>
+
+      <a class="community-button" href="community.html">Community</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>

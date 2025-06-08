@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campaigns</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h2, h3 {
+      color: #003366;
+    }
+
+    .text-box {
+      background-color: #e6f0fa;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    .image-container {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .image-container img {
+      max-width: 80%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .image-container p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+<a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+        <a href="internal.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media & External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships & Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="directory.html">Department Directory</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+        <a href="How-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+<h2>Campaigns Overview</h2>
+      <h2>Plan, Deliver and Evaluate with OASIS</h2>
+      <div class="text-box">
+        <p>The OASIS framework is a structured model for campaign planning and delivery. Developed by the UK Government Communication Service (GCS), it helps communicators define clear outcomes, use insight effectively, and ensure delivery aligns with strategic priorities.</p>
+        <hr/>
+        <h3>Objective</h3>
+        <p>What are you trying to achieve? Set specific, measurable outcomes that link back to your department or program goals. A good objective is outcome-focused (not just outputs) and framed in a way that evaluation can prove success or progress.</p>
+        <h3>Audience Insight</h3>
+        <p>Who do you need to reach and what matters to them? Use research, data and behavioural insight to understand your audiences — including their values, media habits, and barriers to action. This ensures relevance and sharpens your strategy.</p>
+        <h3>Strategy / Idea</h3>
+        <p>What’s your big idea? How will you deliver the right message, through the right messenger, at the right time? Your strategy should summarise the core approach, include your creative platform or theme, and align with other government activity or policy levers.</p>
+        <h3>Implementation</h3>
+        <p>How will the campaign roll out? This step covers your activity schedule, media and channel mix, partnerships, and governance arrangements. Include timings, responsibilities and a risk plan — especially for multi-agency work or high-risk topics.</p>
+        <h3>Scoring / Evaluation</h3>
+        <p>How will success be measured? Link your evaluation directly to the objectives. Use benchmarks and KPIs to assess reach, engagement, behavioural change, or perception shifts. Include a mix of qualitative and quantitative data — and report both results and lessons learned.</p>
+      </div>
+      <div class="image-container">
+        <img src="assets/oasis-framework.png" alt="GCS OASIS Campaign Framework"/>
+        <p>OASIS Campaign Framework – adapted from UK Government Communication Service (GCS)</p>
+      </div>
+      <p>See the full official guidance from GCS here: 
+        <a href="https://gcs.civilservice.gov.uk/guidance/marketing/delivering-government-campaigns/guide-to-campaign-planning-oasis/" target="_blank">Guide to Campaign Planning – OASIS</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Templates and Support</h2>
+      <div class="text-box">
+        <p>You can download and customise the following campaign planning templates to support your work:</p>
+        <ul>
+          <li><a href="#">📄 OASIS Campaign Plan (Word)</a> <em>(Placeholder link)</em></li>
+          <li><a href="#">📊 OASIS Timeline Template (Excel)</a> <em>(Placeholder link)</em></li>
+          <li><a href="#">📈 Strategic Narrative Worksheet</a> <em>(Placeholder link)</em></li>
+        </ul>
+        <p>Need a real-world example? See the Evaluation section for GCS case studies and metrics guidance.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Need help?</h2>
+      <div class="text-box">
+        <p>If your team is planning a new campaign and would benefit from strategic support, speak with your departmental lead or submit a request via the <a href="community.html">Ideas Box</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>

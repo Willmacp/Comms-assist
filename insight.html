@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Insight</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    .text-box {
+      background-color: #e6f0fa;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+<a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+        <a href="internal.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media & External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships & Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="directory.html">Department Directory</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+        <a href="How-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+<section>
+<h2>Understanding Insight</h2>
+<p>Insight is the foundation of effective communications. It helps communicators understand their audience and how to reach them — through data, research, evaluation and listening.</p>
+
+<p>Insight isn't just about numbers. It's about drawing meaning and understanding from a range of sources, so we can develop communications that are audience-focused, evidence-based, and tailored to need.</p><p>Good communications start with strong insight. That means understanding your audience, their attitudes, needs and behaviours — not just assumptions.</p>
+<p>In government comms, this insight could come from research, community feedback, behavioural data, or direct consultation with those most affected.</p>
+<p>The goal is simple: know what matters to your audience, and use that understanding to shape meaningful and measurable communication.</p>
+<p>Read the full GCS guidance on using insight in government campaigns:  
+    <a href="https://gcs.civilservice.gov.uk/guidance/marketing/using-insight/" target="_blank">GCS Insight Guidance</a></p>
+</section>
+<section>
+<h2>Tasmanian Government Insight Sources</h2>
+<p>Useful starting points for local data, audience insight and context:</p>
+<ul>
+<li><a href="https://www.stategrowth.tas.gov.au/about/data" target="_blank">State Growth: Population and Industry Data</a></li>
+<li><a href="https://rdatasmania.org.au/resources" target="_blank">RDAT: Regional Development Australia (Tasmania)</a></li>
+<li><a href="https://www.treasury.tas.gov.au/economy/economic-data" target="_blank">Tas Treasury: Economic Data</a></li>
+<li><a href="https://www.abs.gov.au/statistics" target="_blank">Australian Bureau of Statistics (ABS)</a></li>
+</ul>
+<p>You can use these sources to support campaign planning, define your audience, or track shifting attitudes over time.</p>
+</section>
+<section>
+<h2>Where to Start</h2>
+<ul>
+<li>Use existing data – service stats, helpdesk logs, social listening</li>
+<li>Talk to teams who engage with the audience – frontline staff, case managers</li>
+<li>Capture lived experience – short interviews, focus groups or quotes</li>
+<li>Map what you already know – and highlight gaps</li>
+</ul>
+<p>Even basic insight can make a campaign more relevant and effective.</p>
+</section>
+<section>
+<h2>Tools and Templates</h2>
+<ul>
+<li><a href="#">📄 Audience Profile Template</a> <em>(Placeholder)</em></li>
+<li><a href="#">📍 Stakeholder Mapping Canvas</a> <em>(Placeholder)</em></li>
+<li><a href="#">📝 Insight Briefing Note</a> <em>(Placeholder)</em></li>
+</ul>
+<p>For behaviour-specific guidance, see the <a href="behaviour.html">Behaviour Change</a> section.</p>
+</section>
+</main>
+
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>

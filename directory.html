@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Department Directory</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+    .dropdown {
+      position: relative;
+    }
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #003366;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #ccc;
+    }
+    th {
+      background-color: #e6f0f3;
+    }
+    td a {
+      color: #005f83;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #f0f0f0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+        <a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+        <a href="internal-comms.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media & External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships & Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+        <a href="external-affairs.html">External Affairs</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="community.html">Overview</a>
+        <a href="directory.html">Department Directory</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+        <a href="how-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+ <main>
+<section>
+<h2>Department &amp; Agency Contacts</h2>
+<p>This directory includes key Tasmanian Government departments and agencies, with generic communications contacts and website links where available. You can use this list to connect, collaborate or direct others to the right place.</p><p style="margin-top: 30px;">
+  For the most up-to-date contact details or to view department-specific media contacts, visit:</p>
+<p>
+<a href="https://www.tas.gov.au/communications/contact" target="_blank">Tasmanian Government Communications Contact Page</a>.
+</p><p></p>
+<table>
+<thead>
+<tr>
+<th>Department / Agency</th>
+<th>Email</th>
+<th>Website</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Department of Health</td>
+<td><a href="mailto:communications@health.tas.gov.au">communications@health.tas.gov.au</a></td>
+<td><a href="https://www.health.tas.gov.au" target="_blank">health.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Department of State Growth</td>
+<td><a href="mailto:communications@stategrowth.tas.gov.au">communications@stategrowth.tas.gov.au</a></td>
+<td><a href="https://www.stategrowth.tas.gov.au" target="_blank">stategrowth.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Department of Premier and Cabinet (DPAC)</td>
+<td><a href="mailto:communications@dpac.tas.gov.au">communications@dpac.tas.gov.au</a></td>
+<td><a href="https://www.dpac.tas.gov.au" target="_blank">dpac.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Education, Children &amp; Young People (DECYP)</td>
+<td><a href="mailto:communications@decyp.tas.gov.au">communications@decyp.tas.gov.au</a></td>
+<td><a href="https://www.decyp.tas.gov.au" target="_blank">decyp.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Department of Justice</td>
+<td><a href="mailto:communications@justice.tas.gov.au">communications@justice.tas.gov.au</a></td>
+<td><a href="https://www.justice.tas.gov.au" target="_blank">justice.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Macquarie Point Development Corporation (MPDC)</td>
+<td><a href="mailto:communications@macpoint.com">communications@macpoint.com</a></td>
+<td><a href="https://www.macpoint.com" target="_blank">macpoint.com</a></td>
+</tr>
+<tr>
+<td>Department of Treasury and Finance</td>
+<td><a href="mailto:treasury.communications@treasury.tas.gov.au">treasury.communications@treasury.tas.gov.au</a></td>
+<td><a href="https://www.treasury.tas.gov.au" target="_blank">treasury.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Natural Resources and Environment Tasmania (NRE)</td>
+<td><a href="mailto:communications@nre.tas.gov.au">communications@nre.tas.gov.au</a></td>
+<td><a href="https://nre.tas.gov.au" target="_blank">nre.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Police, Fire and Emergency Management (DPFEM)</td>
+<td><a href="mailto:internalcomms@dpfem.tas.gov.au">internalcomms@dpfem.tas.gov.au</a></td>
+<td><a href="https://www.police.tas.gov.au" target="_blank">police.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>TasTAFE</td>
+<td><a href="mailto:communications@tastafe.tas.edu.au">communications@tastafe.tas.edu.au</a></td>
+<td><a href="https://www.tastafe.tas.edu.au" target="_blank">tastafe.tas.edu.au</a></td>
+</tr>
+<tr>
+<td>Tourism Tasmania</td>
+<td><a href="mailto:communications@tourism.tas.gov.au">communications@tourism.tas.gov.au</a></td>
+<td><a href="https://www.tourismtasmania.com.au" target="_blank">tourismtasmania.com.au</a></td>
+</tr>
+<tr>
+<td>Brand Tasmania</td>
+<td><a href="mailto:info@brandtasmania.com.au">info@brandtasmania.com.au</a></td>
+<td><a href="https://www.brandtasmania.com" target="_blank">brandtasmania.com</a></td>
+</tr>
+<tr>
+<td>Environment Protection Authority (EPA)</td>
+<td><a href="mailto:info@epa.tas.gov.au">info@epa.tas.gov.au</a></td>
+<td><a href="https://epa.tas.gov.au" target="_blank">epa.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Homes Tasmania</td>
+<td><a href="mailto:homes@homes.tas.gov.au">homes@homes.tas.gov.au</a></td>
+<td><a href="https://www.homestasmania.com.au" target="_blank">homestasmania.com.au</a></td>
+</tr>
+<tr>
+<td>Royal Tasmanian Botanical Gardens</td>
+<td><a href="mailto:rtbg@rtbg.tas.gov.au">rtbg@rtbg.tas.gov.au</a></td>
+<td><a href="https://gardens.rtbg.tas.gov.au" target="_blank">gardens.rtbg.tas.gov.au</a></td>
+</tr>
+<tr>
+<td>Stadiums Tasmania</td>
+<td><a href="mailto:info@stadiumstas.com">info@stadiumstas.com</a></td>
+<td><a href="https://www.stadiumstas.com" target="_blank">stadiumstas.com</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+</main>
+
+
+   <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> |
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>

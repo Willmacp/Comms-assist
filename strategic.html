@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Strategic Communications</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    section {
+      padding: 2rem 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    h2, h3 {
+      color: #003366;
+    }
+
+    .text-box {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 6px;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .button-row a {
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .tas-button {
+      background-color: #2d8cae;
+      color: white;
+    }
+
+    .tas-button:hover {
+      background-color: #21728e;
+    }
+
+    .gcs-button {
+      background-color: #6c8c6b;
+      color: white;
+    }
+
+    .gcs-button:hover {
+      background-color: #567354;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #f0f0f0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-bar">
+    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
+    <h1>Tas Gov Comms Assist</h1>
+  </div>
+
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+<a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="insight.html">Insight</a>
+        <a href="behaviour-change.html">Behaviour Change</a>
+        <a href="digital.html">Digital</a>
+        <a href="internal.html">Internal Comms</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="approvals.html">Approvals</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="media-and-external-affairs.html">Media & External Affairs</a>
+      <div class="dropdown-content">
+        <a href="media-relations.html">Media Relations</a>
+        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+        <a href="partnerships.html">Partnerships & Advocates</a>
+        <a href="crisis-comms.html">Crisis Comms</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="branding.html">Branding</a>
+      <div class="dropdown-content">
+        <a href="branding.html">Branding Overview</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="community.html">Community</a>
+      <div class="dropdown-content">
+        <a href="directory.html">Department Directory</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="about.html">About</a>
+      <div class="dropdown-content">
+        <a href="why-gcs.html">Why GCS</a>
+        <a href="How-to-use.html">How to Use</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <h2>Strategic Communications Overview</h2>
+      <div class="text-box">
+        <p>Strategic communication is the deliberate use of communication to advance organisational objectives. In government, this means providing timely, accurate and consistent information that supports policy, earns trust, and delivers measurable public value.</p>
+        <p>It involves identifying the right objectives, shaping the narrative, understanding audiences, and aligning all communication efforts — from campaigns to stakeholder engagement — to common goals. Strategic communication also ensures the right governance, roles and skills are in place to deliver this work effectively across departments.</p>
+        <p>Strategic communications in the public sector are not about short-term awareness alone — they help shape policy outcomes, anticipate risks, and support long-term behaviour and social change.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Strategic Communication Tools</h2>
+      <div class="text-box">
+        <p>This page sets the foundations for many other sections in Comms Assist. If you're starting a campaign or project, use this section to ensure your communications align with organisational strategy and policy goals.</p>
+        <p>For more detailed guidance, see the full UK Government Communication Service Strategic Comms page and its supporting function guide below.</p>
+
+        <div class="button-container">
+          <div class="button-row">
+            <a class="tas-button" href="campaigns.html">Campaigns</a>
+            <a class="tas-button" href="mcom.html">MCOM</a>
+            <a class="tas-button" href="evaluation.html">Evaluation</a>
+            <a class="tas-button" href="insight.html">Insight</a>
+            <a class="tas-button" href="behaviour-change.html">Behaviour Change</a>
+          </div>
+          <div class="button-row">
+            <a class="gcs-button" href="https://gcs.civilservice.gov.uk/guidance/strategic-communications/" target="_blank">GCS Strategic Comms</a>
+            <a class="gcs-button" href="https://gcs.civilservice.gov.uk/wp-content/uploads/2020/03/Cabinet_Office_Strategic-Communications_Function_Guide.pdf" target="_blank">GCS Strategic Comms Guide (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>The Four Core Functions of Strategic Communications</h2>
+      <div class="text-box">
+        <p>Strategic communications within government are guided by four core functions. Together, they provide a consistent and effective model for designing and delivering purposeful communication:</p>
+        <ul style="list-style: none; padding-left: 0;">
+          <li style="margin-bottom: 1.5rem;">
+            <strong>🔍 Insight:</strong> Understand your audiences, channels and context. This involves gathering data, conducting research and identifying behavioural drivers that inform planning.
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <strong>💡 Ideas:</strong> Shape strategies that align to organisational goals. Ideas turn insight into action, guiding the development of clear objectives, messages and engagement plans.
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <strong>🛠️ Implementation:</strong> Deliver through the right mix of channels, tactics and timing. Implementation involves good governance, skilled delivery and collaboration across teams.
+          </li>
+          <li style="margin-bottom: 1.5rem;">
+            <strong>📊 Impact:</strong> Evaluate outcomes against objectives. Impact measurement helps you learn what worked, demonstrate value, and adjust your approach over time.
+          </li>
+        </ul>
+        <p>These four functions form the basis of the <a href="mcom.html">Modern Communications Operating Model (MCOM)</a> and are embedded throughout the Comms Assist toolkit.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
+</body>
+</html>
