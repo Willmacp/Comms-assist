@@ -13,32 +13,40 @@
       color: #333;
     }
 
-    .header-bar {
-      background-color: #003366;
-      padding: 10px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-    }
+   .header-bar {
+  background-color: #003366;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: 10px; /* adds nice horizontal spacing between logo and title */
+}
 
-    .header-bar h1 {
-      color: white;
-      font-size: 1.8rem;
-      margin: 0;
-    }
+.header-bar h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
 
-    .header-logo {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+.header-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-    .header-logo img {
-      max-height: 40px;
-      width: auto;
-    }
+.header-logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .header-logo img {
+    max-height: 35px;
+  }
+}
+
 
     .menu-buttons {
       display: flex;
