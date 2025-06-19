@@ -183,62 +183,14 @@
   </style>
 </head>
 <body>
-  <div class="header-bar">
-    <div class="header-logo"><img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo"/></div>
-    <h1>Tas Gov Comms Assist</h1>
-  </div>
-
-  <div class="menu-buttons">
-    <a href="index.html">Home</a>
-
-    <div class="dropdown">
-      <a href="strategic.html">Strategic Comms</a>
-      <div class="dropdown-content">
-        <a href="mcom.html">MCOM</a>
-<a href="campaigns.html">Campaigns</a>
-        <a href="evaluation.html">Evaluation</a>
-        <a href="insight.html">Insight</a>
-        <a href="behaviour-change.html">Behaviour Change</a>
-        <a href="digital.html">Digital</a>
-  <a href="internal.html">Internal Comms</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="approvals.html">Approvals</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="media-and-external-affairs.html">Media &amp; External Affairs</a>
-      <div class="dropdown-content">
-        <a href="media-relations.html">Media Relations</a>
-        <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
-        <a href="partnerships.html">Partnerships &amp; Advocates</a>
-        <a href="crisis-comms.html">Crisis Comms</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="branding.html">Branding</a>
-      <div class="dropdown-content">
-        <a href="branding.html">Branding Overview</a>
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="community.html">Community</a>
-      <div class="dropdown-content">
-        <a href="directory.html">Department Directory</a>
-      
-      </div>
-    </div>
-
-    <div class="dropdown">
-      <a href="about.html">About</a>
-      <div class="dropdown-content">
-        <a href="why-gcs.html">Why GCS</a>
-<a href="How-to-use.html">How to Use</a>
-      </div>
-    </div>
-  </div>
+  <div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+    });
+</script>
 
   <main>
     <section>
