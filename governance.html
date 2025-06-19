@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Governance | Comms Assist</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    nav {
+      background-color: #e0e0e0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #003366;
+      margin: 0 15px;
+      font-weight: bold;
+      padding: 6px 12px;
+    }
+
+    nav a:hover {
+      background-color: #ccc;
+      border-radius: 4px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #003366;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    .tas-button {
+      display: inline-block;
+      background-color: #005ea5;
+      color: white;
+      padding: 10px 18px;
+      margin: 20px 0;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+
+    .tas-button:hover {
+      background-color: #003f75;
+    }
+
+    a {
+      color: #005ea5;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+    });
+</script>
+
+
+  <div class="container">
+    <h2>Governance</h2>
+    <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
+
+    <h2>What to include in your governance process</h2>
+    <ul>
+      <li>Clear approval steps for campaign stages and messaging</li>
+      <li>Engagement with legal, policy, or ministerial teams when necessary</li>
+      <li>Defined roles and responsibilities, including senior ownership</li>
+      <li>Sign-off from relevant executives, boards, or sponsors</li>
+      <li>Processes for issues management, risks, and lessons learned</li>
+    </ul>
+
+    <h2>Helpful templates and tools</h2>
+    <p>Use the tools and templates below to improve consistency and accountability:</p>
+    <ul>
+      <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
+      <li><a href="#">Example Governance Framework (coming soon)</a></li>
+      <li><a href="#">Reporting and Evaluation Template (coming soon)</a></li>
+    </ul>
+
+    <h2>GCS and Tasmanian Government resources</h2>
+    <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
+    <ul>
+      <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
+      <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
+    </ul>
+
+    <a class="tas-button" href="index.html">← Back to Home</a>
+  </div>
+
+  <div class="footer">
+    © 2025 Tasmanian Government | Comms Assist Tool | Built with GCS and Tas Gov guidance
+  </div>
+
+</body>
+</html>
