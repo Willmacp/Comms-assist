@@ -98,11 +98,10 @@
       border-bottom: 1px solid #ddd;
     }
 
-    h1 {
-      color: #254A75;
-    }
-
-    h2, h3 {
+    /* ✅ Apply correct heading colour inside <main> only */
+    main h1,
+    main h2,
+    main h3 {
       color: #254A75;
     }
 
@@ -138,7 +137,7 @@
 </head>
 <body>
 
-  <!-- Use external header include -->
+  <!-- ✅ External header include -->
   <div id="header-placeholder"></div>
   <script>
     fetch("header.html")
@@ -148,54 +147,54 @@
       });
   </script>
 
-<main>
-  <section>
-    <center><h1>Governance</h1></center>
-    <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
-  </section>
+  <main>
+    <section>
+      <center><h1>Governance</h1></center>
+      <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
+    </section>
 
-  <section>
-    <h2>What to include in your governance process</h2>
-    <ul>
-      <li>Clear approval steps for campaign stages and messaging</li>
-      <li>Engagement with legal, policy, or ministerial teams when necessary</li>
-      <li>Defined roles and responsibilities, including senior ownership</li>
-      <li>Sign-off from relevant executives, boards, or sponsors</li>
-      <li>Processes for issues management, risks, and lessons learned</li>
-    </ul>
-  </section>
+    <section>
+      <h2>What to include in your governance process</h2>
+      <ul>
+        <li>Clear approval steps for campaign stages and messaging</li>
+        <li>Engagement with legal, policy, or ministerial teams when necessary</li>
+        <li>Defined roles and responsibilities, including senior ownership</li>
+        <li>Sign-off from relevant executives, boards, or sponsors</li>
+        <li>Processes for issues management, risks, and lessons learned</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Helpful templates and tools</h2>
-    <p>Use the tools and templates below to improve consistency and accountability:</p>
-    <ul>
-      <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
-      <li><a href="#">Example Governance Framework (coming soon)</a></li>
-      <li><a href="#">Reporting and Evaluation Template (coming soon)</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>Helpful templates and tools</h2>
+      <p>Use the tools and templates below to improve consistency and accountability:</p>
+      <ul>
+        <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
+        <li><a href="#">Example Governance Framework (coming soon)</a></li>
+        <li><a href="#">Reporting and Evaluation Template (coming soon)</a></li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>GCS and Tasmanian Government resources</h2>
-    <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
-    <ul>
-      <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
-      <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
-    </ul>
-  </section>
+    <section>
+      <h2>GCS and Tasmanian Government resources</h2>
+      <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
+      <ul>
+        <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
+        <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
+      </ul>
+    </section>
 
-  <section>
-    <a class="tas-button" href="index.html">← Back to Home</a>
-  </section>
-</main>
+    <section>
+      <a class="tas-button" href="index.html">← Back to Home</a>
+    </section>
+  </main>
 
-<footer>
-  <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
-  This resource will grow through cross-agency contribution and shared insight.<br/>
-  🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> |
-  <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
-  </p>
-</footer>
+  <footer>
+    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+    This resource will grow through cross-agency contribution and shared insight.<br/>
+    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> |
+    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+    </p>
+  </footer>
 
 </body>
 </html>
