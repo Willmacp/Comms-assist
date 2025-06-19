@@ -1,0 +1,166 @@
+<div class="header-bar">
+  <div class="header-top">
+    <img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo" class="responsive-logo" />
+    <h1 class="site-title">Tas Gov Comms Assist</h1>
+  </div>
+</div>
+
+<div class="menu-buttons">
+  <a href="index.html">Home</a>
+  
+  <div class="dropdown">
+    <a href="strategic.html">Strategic Comms</a>
+    <div class="dropdown-content">
+      <a href="mcom.html">MCOM</a>
+      <a href="campaigns.html">Campaigns</a>
+      <a href="evaluation.html">Evaluation</a>
+      <a href="insight.html">Insight</a>
+      <a href="behaviour-change.html">Behaviour Change</a>
+      <a href="digital.html">Digital</a>
+      <a href="internal.html">Internal Comms</a>
+      <a href="accessibility.html">Accessibility</a>
+      <a href="approvals.html">Approvals</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="media-and-external-affairs.html">Media & External Affairs</a>
+    <div class="dropdown-content">
+      <a href="external-affairs.html">External Affairs</a>
+      <a href="media-relations.html">Media Relations</a>
+      <a href="stakeholder-engagement.html">Stakeholder Engagement</a>
+      <a href="partnerships.html">Partnerships & Advocates</a>
+      <a href="crisis-comms.html">Crisis Comms</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="branding.html">Branding</a>
+    <div class="dropdown-content">
+      <a href="branding.html">Branding Overview</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="community.html">Community</a>
+    <div class="dropdown-content">
+      <a href="directory.html">Department Directory</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="about.html">About</a>
+    <div class="dropdown-content">
+      <a href="why-gcs.html">Why GCS</a>
+      <a href="how-to-use.html">How to Use</a>
+      <a href="governance.html">Governance</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .header-bar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .responsive-logo {
+    max-height: 60px;
+    width: auto;
+    margin-bottom: 6px;
+  }
+
+  .site-title {
+    color: white;
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  @media (max-width: 600px) {
+    .responsive-logo {
+      max-height: 50px;
+    }
+
+    .site-title {
+      font-size: 1.3rem;
+    }
+  }
+
+  .menu-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #e0e0e0;
+    padding: 10px;
+    gap: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown > a {
+    background-color: #254A75;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e6f0fa;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1000;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .dropdown-content a {
+    padding: 10px 16px;
+    display: block;
+    color: #003366;
+    background-color: #e6f0fa;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #d5e8f8;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .menu-buttons a {
+    background-color: #254A75;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    width: 180px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  .menu-buttons a:hover {
+    background-color: #999999;
+  }
+</style>
