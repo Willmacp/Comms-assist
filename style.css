@@ -185,3 +185,18 @@ footer {
 .community-button:hover {
   opacity: 0.9;
 }
+
+/* Group-based header theming */
+body.strategic header { background-color: #3b5f8a; }
+body.insight header { background-color: #457a5b; }
+body.media header { background-color: #6a5acd; }
+body.internal header { background-color: #556b6f; }
+body.community header { background-color: #009688; }
+body.branding header { background-color: #3f6fa0; }
+body.about header { background-color: #708090; }
+body.mcom header { background-color: #00274D; }
+
+/* Ensure header text is white */
+header, header a, header nav a {
+  color: white !important;
+}
