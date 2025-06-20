@@ -216,3 +216,7 @@ main {
   background-color: white !important;
 }
 
+body.about main {
+  background-color: #ffffff !important;
+  background: #ffffff !important;
+}
