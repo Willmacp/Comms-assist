@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Governance</title>
+  <title>Governance | Comms Assist</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,6 +11,33 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
     }
 
     .menu-buttons {
@@ -94,35 +121,19 @@
     }
 
     section {
-      padding: 1.5rem 0;
+      padding: 1rem 0;
       border-bottom: 1px solid #ddd;
     }
 
-    /* ✅ Only style headings inside main content */
-    main h1, main h2, main h3 {
-      color: #254A75;
+    h2, h3 {
+      color: #003366;
     }
 
-    a {
-      color: #005ea5;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .tas-button {
-      display: inline-block;
-      background-color: #005ea5;
-      color: white;
-      padding: 10px 18px;
-      margin: 20px 0;
-      text-decoration: none;
+    .text-box {
+      background-color: #e6f0fa;
+      padding: 1rem;
       border-radius: 6px;
-    }
-
-    .tas-button:hover {
-      background-color: #003f75;
+      margin: 1rem 0;
     }
 
     footer {
@@ -134,53 +145,43 @@
   </style>
 </head>
 <body>
-
-  <!-- ✅ Load shared header -->
-<div class="header-bar">
-  <div class="header-logo">
-    <img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo" />
+  <!-- Header pulled inline from working About page structure -->
+  <div class="header-bar">
+    <div class="header-logo">
+      <img src="assets/tas-gov-logo.png" alt="Tasmanian Government Logo" />
+    </div>
+    <h1>Comms Assist</h1>
   </div>
-  <h1>Tas Gov Comms Assist</h1>
-</div>
 
-<style>
-  .header-bar {
-    background-color: #003366;
-    padding: 10px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  .header-bar h1 {
-    color: white;
-    font-size: 1.8rem;
-    margin: 0;
-  }
-
-  .header-logo {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .header-logo img {
-    max-height: 40px;
-    width: auto;
-  }
-</style>
-
+  <div class="menu-buttons">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="strategic.html">Strategic Comms</a>
+      <div class="dropdown-content">
+        <a href="mcom.html">MCOM</a>
+        <a href="campaigns.html">Campaigns</a>
+        <a href="insight.html">Insight</a>
+        <a href="evaluation.html">Evaluation</a>
+        <a href="media.html">Media</a>
+        <a href="stakeholders.html">Stakeholders</a>
+        <a href="governance.html"><strong>Governance</strong></a>
+      </div>
+    </div>
+    <a href="branding.html">Branding</a>
+    <a href="digital.html">Digital</a>
+    <a href="community.html">Community</a>
+    <a href="directory.html">Directory</a>
+    <a href="about.html">About</a>
+  </div>
 
   <main>
     <section>
-      <h1>Governance</h1>
+      <h2>Governance</h2>
       <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
     </section>
 
     <section>
-      <h2>What to include in your governance process</h2>
+      <h3>What to include in your governance process</h3>
       <ul>
         <li>Clear approval steps for campaign stages and messaging</li>
         <li>Engagement with legal, policy, or ministerial teams when necessary</li>
@@ -191,7 +192,7 @@
     </section>
 
     <section>
-      <h2>Helpful templates and tools</h2>
+      <h3>Helpful templates and tools</h3>
       <p>Use the tools and templates below to improve consistency and accountability:</p>
       <ul>
         <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
@@ -201,16 +202,12 @@
     </section>
 
     <section>
-      <h2>GCS and Tasmanian Government resources</h2>
+      <h3>GCS and Tasmanian Government resources</h3>
       <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
       <ul>
         <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
         <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
       </ul>
-    </section>
-
-    <section>
-      <a class="tas-button" href="index.html">← Back to Home</a>
     </section>
   </main>
 
@@ -221,6 +218,5 @@
     <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
     </p>
   </footer>
-
 </body>
 </html>
