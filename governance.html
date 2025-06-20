@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Governance | Comms Assist</title>
+  <title>Governance</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -11,6 +11,104 @@
       padding: 0;
       background-color: #f4f4f4;
       color: #333;
+    }
+
+    .header-bar {
+      background-color: #003366;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .header-bar h1 {
+      color: white;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .header-logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-logo img {
+      max-height: 40px;
+      width: auto;
+    }
+
+    .menu-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #e0e0e0;
+      padding: 10px;
+      gap: 12px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown > a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #e6f0fa;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .dropdown-content a {
+      padding: 10px 16px;
+      display: block;
+      color: #003366;
+      background-color: #e6f0fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #d5e8f8;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .menu-buttons a {
+      background-color: #254A75;
+      color: white;
+      text-decoration: none;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      border-radius: 8px;
+      width: 180px;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #999999;
     }
 
     main {
@@ -23,7 +121,7 @@
     }
 
     section {
-      padding: 1rem 0;
+      padding: 2rem 0;
       border-bottom: 1px solid #ddd;
     }
 
@@ -31,26 +129,11 @@
       color: #003366;
     }
 
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    a {
-      color: #005ea5;
-    }
-
-    .tas-button {
-      display: inline-block;
-      background-color: #005ea5;
-      color: white;
-      padding: 10px 18px;
-      margin: 20px 0;
-      text-decoration: none;
+    .text-box {
+      background-color: #e6f0fa;
+      padding: 1rem;
       border-radius: 6px;
-    }
-
-    .tas-button:hover {
-      background-color: #003f75;
+      margin: 1rem 0;
     }
 
     footer {
@@ -59,64 +142,71 @@
       background: #f0f0f0;
       margin-top: 2rem;
     }
+
+    a {
+      color: #005ea5;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
   </style>
 </head>
 <body>
 
-  <!-- ✅ Shared header loaded from file -->
-  <div id="header-placeholder"></div>
-  <script>
-    fetch("header.html")
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById("header-placeholder").innerHTML = html;
-      });
-  </script>
+<div id="header-placeholder"></div>
+<script>
+  fetch("header.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("header-placeholder").innerHTML = html;
+    });
+</script>
 
-  <main>
-    <section>
-      <h2>Governance</h2>
-      <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
-    </section>
+<main>
+  <section>
+    <h2>Governance</h2>
+    <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
+  </section>
 
-    <section>
-      <h3>What to include in your governance process</h3>
-      <ul>
-        <li>Clear approval steps for campaign stages and messaging</li>
-        <li>Engagement with legal, policy, or ministerial teams when necessary</li>
-        <li>Defined roles and responsibilities, including senior ownership</li>
-        <li>Sign-off from relevant executives, boards, or sponsors</li>
-        <li>Processes for issues management, risks, and lessons learned</li>
-      </ul>
-    </section>
+  <section>
+    <h3>What to include in your governance process</h3>
+    <ul>
+      <li>Clear approval steps for campaign stages and messaging</li>
+      <li>Engagement with legal, policy, or ministerial teams when necessary</li>
+      <li>Defined roles and responsibilities, including senior ownership</li>
+      <li>Sign-off from relevant executives, boards, or sponsors</li>
+      <li>Processes for issues management, risks, and lessons learned</li>
+    </ul>
+  </section>
 
-    <section>
-      <h3>Helpful templates and tools</h3>
-      <p>Use the tools and templates below to improve consistency and accountability:</p>
-      <ul>
-        <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
-        <li><a href="#">Example Governance Framework (coming soon)</a></li>
-        <li><a href="#">Reporting and Evaluation Template (coming soon)</a></li>
-      </ul>
-    </section>
+  <section>
+    <h3>Helpful templates and tools</h3>
+    <p>Use the tools and templates below to improve consistency and accountability:</p>
+    <ul>
+      <li><a href="#">Campaign Approvals Checklist (coming soon)</a></li>
+      <li><a href="#">Example Governance Framework (coming soon)</a></li>
+      <li><a href="#">Reporting and Evaluation Template (coming soon)</a></li>
+    </ul>
+  </section>
 
-    <section>
-      <h3>GCS and Tasmanian Government resources</h3>
-      <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
-      <ul>
-        <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
-        <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
-      </ul>
-    </section>
-  </main>
+  <section>
+    <h3>GCS and Tasmanian Government resources</h3>
+    <p>Strong governance is a foundation of good strategic communications. For more detail, visit:</p>
+    <ul>
+      <li><a href="https://gcs.civilservice.gov.uk/guidance/communications-approvals-process/" target="_blank">GCS Communications Approvals Process</a></li>
+      <li><a href="https://www.tas.gov.au/communications" target="_blank">Tasmanian Government Communications Guidance</a></li>
+    </ul>
+  </section>
+</main>
 
-  <footer>
-    <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
-    This resource will grow through cross-agency contribution and shared insight.<br/>
-    🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> |
-    <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
-    </p>
-  </footer>
+<footer>
+  <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
+  This resource will grow through cross-agency contribution and shared insight.<br/>
+  🔗 <a href="https://gcs.civilservice.gov.uk/" target="_blank">UK GCS Website</a> | 
+  <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms</a>
+  </p>
+</footer>
 
 </body>
 </html>
