@@ -200,3 +200,13 @@ body.mcom .header-bar { background-color: #00274D !important; }
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
+
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
