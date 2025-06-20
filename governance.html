@@ -98,10 +98,8 @@
       border-bottom: 1px solid #ddd;
     }
 
-    /* ✅ Apply correct heading colour inside <main> only */
-    main h1,
-    main h2,
-    main h3 {
+    /* ✅ Only style headings inside main content */
+    main h1, main h2, main h3 {
       color: #254A75;
     }
 
@@ -137,7 +135,7 @@
 </head>
 <body>
 
-  <!-- ✅ External header include -->
+  <!-- ✅ Load shared header -->
   <div id="header-placeholder"></div>
   <script>
     fetch("header.html")
@@ -149,7 +147,7 @@
 
   <main>
     <section>
-      <center><h1>Governance</h1></center>
+      <h1>Governance</h1>
       <p>The Communications Governance section provides guidance for ensuring your communication activities align with internal processes, approvals, and public sector obligations. Good governance protects your project, your team, and your audiences — and it helps make the case for communications being a strategic function.</p>
     </section>
 
