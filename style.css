@@ -186,18 +186,17 @@ footer {
   opacity: 0.9;
 }
 
-/* Group-based header theming */
-body.strategic .header-bar { background-color: #3b5f8a; }
-body.insight .header-bar { background-color: #457a5b; }
-body.media .header-bar { background-color: #6a5acd; }
-body.internal .header-bar { background-color: #556b6f; }
-body.community .header-bar { background-color: #009688; }
-body.branding .header-bar { background-color: #3f6fa0; }
-body.about .header-bar { background-color: #708090; }
-body.mcom .header-bar { background-color: #00274D; }
-
+/* Group-based header theming with stronger specificity */
+body.strategic .header-bar { background-color: #3b5f8a !important; }
+body.insight .header-bar { background-color: #457a5b !important; }
+body.media .header-bar { background-color: #6a5acd !important; }
+body.internal .header-bar { background-color: #556b6f !important; }
+body.community .header-bar { background-color: #009688 !important; }
+body.branding .header-bar { background-color: #3f6fa0 !important; }
+body.about .header-bar { background-color: #708090 !important; }
+body.mcom .header-bar { background-color: #00274D !important; }
 
 /* Ensure header text is white */
-header, header a, header nav a {
+.header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
