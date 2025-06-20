@@ -135,3 +135,53 @@ footer {
   background: #f0f0f0;
   margin-top: 2rem;
 }
+
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-grid a {
+  flex: 1 1 200px;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.mcom { background-color: #00274D; }
+.campaigns { background-color: #3b5f8a; }
+.insight { background-color: #457a5b; }
+.evaluation { background-color: #566d99; }
+.branding { background-color: #3f6fa0; }
+.media { background-color: #6a5acd; }
+.directory { background-color: #2F4F4F; }
+.internal { background-color: #556b6f; }
+.about { background-color: #708090; }
+
+.button-grid a:hover {
+  opacity: 0.9;
+}
+
+.community-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: #009688;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.community-button:hover {
+  opacity: 0.9;
+}
