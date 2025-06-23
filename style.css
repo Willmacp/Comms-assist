@@ -4,6 +4,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  padding-top: 100px; /* Adjust depending on header height */
 }
 
 /* Header */
@@ -19,14 +20,22 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease;
 }
-body {
-  padding-top: 100px; /* Adjust depending on header height */
+
+.header-bar.shrink {
+  padding: 10px 0;
 }
+
 .header-bar h1 {
   color: white;
   font-size: 1.8rem;
   margin: 0;
+  transition: font-size 0.3s ease;
+}
+
+.header-bar.shrink h1 {
+  font-size: 1.5rem;
 }
 
 .header-logo {
@@ -34,13 +43,18 @@ body {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-    display: flex;
+  display: flex;
   align-items: center;
 }
 
 .header-logo img {
-  max-height: 60px;
+  max-height: 70px;
   width: auto;
+  transition: max-height 0.3s ease;
+}
+
+.header-bar.shrink .header-logo img {
+  max-height: 50px;
 }
 
 /* Make title a subtle link */
@@ -70,7 +84,7 @@ body {
 
 .dropdown > a,
 .menu-buttons a {
-  background-color: #4A6A9A; /* Slightly lighter than original */
+  background-color: #4A6A9A;
   color: white;
   text-decoration: none;
   padding: 12px 20px;
@@ -86,7 +100,7 @@ body {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #3A5D91; /* Original dropdown background restored */
+  background-color: #3A5D91;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   z-index: 1000;
@@ -296,21 +310,23 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   margin: 1.5rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
   .header-bar {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 16px;
+    align-items: center;
+    padding: 14px 10px;
   }
 
   .header-logo {
     position: static;
     transform: none;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .header-bar h1 {
-    text-align: left;
-    font-size: 1.5rem;
+    text-align: center;
+    font-size: 1.4rem;
   }
 }
