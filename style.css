@@ -8,13 +8,21 @@ body {
 
 /* Header */
 .header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: inherit;
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
+body {
+  padding-top: 100px; /* Adjust depending on header height */
+}
 .header-bar h1 {
   color: white;
   font-size: 1.8rem;
