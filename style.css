@@ -34,10 +34,12 @@ body {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
+    display: flex;
+  align-items: center;
 }
 
 .header-logo img {
-  max-height: 40px;
+  max-height: 60px;
   width: auto;
 }
 
