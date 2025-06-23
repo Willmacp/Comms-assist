@@ -230,23 +230,6 @@ body.mcom .header-bar { background-color: #00274D !important; }
   opacity: 0.95;
 }
 
-.gcs-button {
-  background-color: #003366 !important;
-  color: white !important;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
-}
-
-.gcs-button:hover {
-  background-color: #00264d !important;
-  opacity: 0.95;
-}
 
 .button-container {
   display: flex;
