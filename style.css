@@ -1,38 +1,41 @@
-body {
+body { 
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 180px; /* Adjust depending on header height */
+  padding-top: 180px;
 }
 
-/* Header */
-.header-bar {
+.header-wrapper {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   background-color: inherit;
-  padding: 20px 0 0 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-bar {
+  padding: 20px 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: inherit;
   transition: padding 0.3s ease;
 }
 
 .header-bar.shrink {
-  padding: 10px 0 0 0;
+  padding: 10px 0 0;
 }
 
 .header-bar h1 {
   color: white;
   font-size: 1.8rem;
-  margin: 0.25rem 0;
+  margin: 0;
   transition: font-size 0.3s ease;
+  text-align: center;
 }
 
 .header-bar.shrink h1 {
@@ -40,9 +43,12 @@ body {
 }
 
 .header-logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
 }
 
 .header-logo img {
@@ -55,7 +61,6 @@ body {
   max-height: 50px;
 }
 
-/* Make title a subtle link */
 .header-title-link {
   text-decoration: none;
   color: inherit;
@@ -66,7 +71,6 @@ body {
   opacity: 0.85;
 }
 
-/* Menu buttons (now inside header-bar) */
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -74,7 +78,6 @@ body {
   background-color: #e0e0e0;
   padding: 10px;
   gap: 12px;
-  width: 100%;
 }
 
 .dropdown {
@@ -128,7 +131,6 @@ body {
   background-color: #999999;
 }
 
-/* Page body */
 main {
   max-width: 960px;
   margin: 2rem auto;
@@ -161,7 +163,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Homepage grid */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
@@ -185,18 +186,16 @@ footer {
   opacity: 0.9;
 }
 
-/* Homepage button colours */
 .mcom-button       { background-color: #00274D; }
 .strategic-button  { background-color: #3b5f8a; }
 .insight-button    { background-color: #6a5acd; }
-.evaluation-button { background-color: #566d99; }
-.branding-button   { background-color: #3f6fa0; }
-.media-button      { background-color: #457a5b; }
-.directory-button  { background-color: #2F4F4F; }
+evaluation-button { background-color: #566d99; }
+branding-button   { background-color: #3f6fa0; }
+media-button      { background-color: #457a5b; }
+directory-button  { background-color: #2F4F4F; }
 .internal-button   { background-color: #556b6f; }
 .about-button      { background-color: #708090; }
 
-/* Community special button */
 .community-button {
   display: block;
   width: auto;
@@ -214,23 +213,20 @@ footer {
   opacity: 0.9;
 }
 
-/* Page-specific header backgrounds */
-body.strategic .header-bar   { background-color: #3b5f8a !important; }
-body.insight .header-bar     { background-color: #6a5acd !important; }
-body.media .header-bar       { background-color: #457a5b !important; }
-body.internal .header-bar    { background-color: #556b6f !important; }
-body.community .header-bar   { background-color: #009688 !important; }
-body.branding .header-bar    { background-color: #3f6fa0 !important; }
-body.about .header-bar       { background-color: #708090 !important; }
-body.directory .header-bar   { background-color: #2F4F4F !important; }
-body.mcom .header-bar        { background-color: #00274D !important; }
+body.strategic .header-wrapper   { background-color: #3b5f8a !important; }
+body.insight .header-wrapper     { background-color: #6a5acd !important; }
+body.media .header-wrapper       { background-color: #457a5b !important; }
+body.internal .header-wrapper    { background-color: #556b6f !important; }
+body.community .header-wrapper   { background-color: #009688 !important; }
+body.branding .header-wrapper    { background-color: #3f6fa0 !important; }
+body.about .header-wrapper       { background-color: #708090 !important; }
+body.directory .header-wrapper   { background-color: #2F4F4F !important; }
+body.mcom .header-wrapper        { background-color: #00274D !important; }
 
-/* Force header text white */
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
 
-/* Section buttons */
 .tas-button, .gcs-button, .assist-button {
   padding: 1rem;
   text-decoration: none;
@@ -240,19 +236,35 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   text-align: center;
   min-width: 180px;
   margin: 0.5rem;
-  color: white;
 }
 
-.tas-button { background-color: #3b5f8a; }
-.tas-button:hover { background-color: #2e4b6c; }
+.tas-button {
+  background-color: #3b5f8a;
+  color: white;
+}
+.tas-button:hover {
+  background-color: #2e4b6c;
+  opacity: 0.95;
+}
 
-.gcs-button { background-color: #2E7D32; }
-.gcs-button:hover { background-color: #256528; }
+.gcs-button {
+  background-color: #2E7D32;
+  color: white;
+}
+.gcs-button:hover {
+  background-color: #256528;
+  opacity: 0.95;
+}
 
-.assist-button { background-color: #3f6fa0; }
-.assist-button:hover { background-color: #3a3a3a; }
+.assist-button {
+  background-color: #3f6fa0;
+  color: white;
+}
+.assist-button:hover {
+  background-color: #3a3a3a;
+  opacity: 0.95;
+}
 
-/* Stacked rows of buttons */
 .button-container {
   display: flex;
   flex-direction: column;
@@ -266,7 +278,6 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   justify-content: center;
 }
 
-/* Iframe wrapper */
 .iframe-box {
   border: 4px solid #00274D;
   border-radius: 8px;
@@ -275,12 +286,11 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
 @media (max-width: 600px) {
   .header-bar {
     flex-direction: column;
     align-items: center;
-    padding: 14px 10px 0 10px;
+    padding: 14px 10px 0;
   }
 
   .header-logo {
@@ -292,10 +302,5 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   .header-bar h1 {
     text-align: center;
     font-size: 1.4rem;
-  }
-
-  .menu-buttons {
-    flex-direction: column;
-    align-items: center;
   }
 }
