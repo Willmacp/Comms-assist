@@ -229,6 +229,24 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   background-color: #256528;
   opacity: 0.95;
 }
+.assist-button {
+  background-color: #4a4a4a; /* Neutral grey for internal tools or resources */
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  margin: 0.5rem;
+}
+
+.assist-button:hover {
+  background-color: #3a3a3a;
+  opacity: 0.95;
+}
+
 
 /* Button containers for stacked rows */
 .button-container {
