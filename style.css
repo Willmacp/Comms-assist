@@ -230,7 +230,7 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   opacity: 0.95;
 }
 .assist-button {
-  background-color: #4a90e2; /* Neutral grey for internal tools or resources */
+  background-color: #3f6fa0; /* grey /blue for internal tools or resources */
   color: white;
   padding: 1rem;
   text-decoration: none;
