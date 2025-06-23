@@ -204,3 +204,7 @@ body.mcom .header-bar { background-color: #00274D !important; }
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
+body.media .button-grid a { background-color: #457a5b; }
+body.strategic .button-grid a { background-color: #3b5f8a; }
+body.insight .button-grid a { background-color: #6a5acd; }
+/* and so on... */
