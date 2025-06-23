@@ -47,7 +47,7 @@ body {
 
 .dropdown > a,
 .menu-buttons a {
-  background-color: #254A75;
+  background-color: #3A5D91;
   color: white;
   text-decoration: none;
   padding: 12px 20px;
@@ -269,4 +269,12 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   padding: 0.5rem;
   margin: 1.5rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.header-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-title-link:hover {
+  opacity: 0.85;
 }
