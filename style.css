@@ -40,6 +40,22 @@ body {
   padding: 10px;
   gap: 12px;
 }
+/* In-page button colour styles by section */
+body.media .button-grid a { background-color: #457a5b; }
+body.strategic .button-grid a { background-color: #3b5f8a; }
+body.insight .button-grid a { background-color: #6a5acd; }
+body.evaluation .button-grid a { background-color: #566d99; }
+body.branding .button-grid a { background-color: #3f6fa0; }
+body.internal .button-grid a { background-color: #556b6f; }
+body.community .button-grid a { background-color: #009688; }
+body.about .button-grid a { background-color: #708090; }
+body.directory .button-grid a { background-color: #2F4F4F; }
+body.mcom .button-grid a { background-color: #00274D; }
+
+.button-grid a:hover {
+  opacity: 0.9;
+}
+
 
 .dropdown {
   position: relative;
