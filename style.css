@@ -260,3 +260,20 @@ body.mcom .header-bar { background-color: #00274D !important; }
   flex-wrap: wrap;
   justify-content: center;
 }
+.gcs-button {
+  background-color: #2E7D32; /* Green */
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  margin: 0.5rem;
+}
+
+.gcs-button:hover {
+  background-color: #256528;
+  opacity: 0.95;
+}
