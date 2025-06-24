@@ -1,24 +1,22 @@
+/* Widget icon */
 #ai-chat-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #000000;
-  color: white;
-  font-weight: bold;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 0.95rem;
-  border-radius: 20px;
-  padding: 10px 16px;
+  background-color: #3b5f8a;
+  border-radius: 50%;
+  padding: 12px;
   cursor: pointer;
   z-index: 9999;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;
 }
 
-#ai-chat-icon:hover {
-  background-color: #2e4b6c;
+#ai-chat-icon img {
+  width: 36px;
+  height: 36px;
 }
 
+/* Chat window */
 #ai-chat-box {
   position: fixed;
   bottom: 80px;
@@ -33,6 +31,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Header */
 .chat-header {
   background-color: #3b5f8a;
   color: white;
@@ -53,6 +52,7 @@
   cursor: pointer;
 }
 
+/* Body */
 .chat-body {
   padding: 12px;
   font-size: 0.9rem;
@@ -62,6 +62,7 @@
   line-height: 1.4;
 }
 
+/* (Optional future input styles if you want chatbot interactivity) */
 .chat-input {
   display: flex;
   padding: 10px;
@@ -88,6 +89,7 @@
   cursor: pointer;
 }
 
+/* Message styles */
 .user-msg, .ai-msg {
   padding: 6px 10px;
   margin: 6px;
