@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 220px; /* Increased for header + menu */
+  padding-top: 220px; /* Allows for full fixed header and menu */
 }
 
 /* Header */
@@ -57,7 +57,7 @@ body {
   max-height: 50px;
 }
 
-/* Make title a subtle link */
+/* Title link styling */
 .header-title-link {
   text-decoration: none;
   color: inherit;
@@ -68,10 +68,10 @@ body {
   opacity: 0.85;
 }
 
-/* Menu buttons */
+/* Combined fixed section for header and menu */
 .menu-buttons {
   position: fixed;
-  top: 90px;
+  top: 100px; /* Adjusted to sit just under header bar */
   left: 0;
   width: 100%;
   display: flex;
@@ -83,6 +83,7 @@ body {
   z-index: 999;
 }
 
+/* Buttons and dropdowns */
 .dropdown {
   position: relative;
 }
@@ -202,7 +203,7 @@ footer {
 .internal-button   { background-color: #556b6f; }
 .about-button      { background-color: #708090; }
 
-/* Community special button */
+/* Community button */
 .community-button {
   display: block;
   width: auto;
@@ -220,7 +221,7 @@ footer {
   opacity: 0.9;
 }
 
-/* Page-specific header backgrounds */
+/* Page-specific header colours */
 body.strategic .header-bar   { background-color: #3b5f8a !important; }
 body.insight .header-bar     { background-color: #6a5acd !important; }
 body.media .header-bar       { background-color: #457a5b !important; }
@@ -231,7 +232,7 @@ body.about .header-bar       { background-color: #708090 !important; }
 body.directory .header-bar   { background-color: #2F4F4F !important; }
 body.mcom .header-bar        { background-color: #00274D !important; }
 
-/* Force header text white */
+/* Header and nav text */
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
@@ -255,7 +256,6 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   opacity: 0.95;
 }
 
-/* GCS external link button */
 .gcs-button {
   background-color: #2E7D32;
   color: white;
@@ -274,7 +274,6 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   opacity: 0.95;
 }
 
-/* Internal resource button */
 .assist-button {
   background-color: #3f6fa0;
   color: white;
@@ -293,7 +292,7 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   opacity: 0.95;
 }
 
-/* Stacked rows of buttons */
+/* Button rows */
 .button-container {
   display: flex;
   flex-direction: column;
@@ -307,7 +306,7 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   justify-content: center;
 }
 
-/* Iframe wrapper */
+/* Iframe styling */
 .iframe-box {
   border: 4px solid #00274D;
   border-radius: 8px;
@@ -316,7 +315,7 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+/* Mobile tweaks */
 @media (max-width: 600px) {
   .header-bar {
     flex-direction: column;
