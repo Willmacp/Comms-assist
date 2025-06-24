@@ -1,13 +1,16 @@
+/**
+ * FULL CSS with hamburger menu for mobile view
+ */
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 230px; /* Adjust if needed for header + menu height */
+  padding-top: 180px; /* Adjust for header + menu height */
 }
 
-/* Combined fixed wrapper */
 .header-wrapper {
   position: fixed;
   top: 0;
@@ -18,13 +21,12 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header title/logo row */
 .header-bar {
-    position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
+  position: relative;
 }
 
 .header-bar h1 {
@@ -56,7 +58,6 @@ body {
   opacity: 0.85;
 }
 
-/* Menu bar */
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -117,7 +118,40 @@ body {
   display: block;
 }
 
-/* Page-specific header backgrounds */
+/* Hamburger button */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 18px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger div {
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .menu-buttons {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-buttons.show {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
 body.strategic .header-wrapper   { background-color: #3b5f8a !important; }
 body.insight .header-wrapper     { background-color: #6a5acd !important; }
 body.media .header-wrapper       { background-color: #457a5b !important; }
@@ -128,12 +162,10 @@ body.about .header-wrapper       { background-color: #708090 !important; }
 body.directory .header-wrapper   { background-color: #2F4F4F !important; }
 body.mcom .header-wrapper        { background-color: #00274D !important; }
 
-/* Force white text in header */
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
 
-/* Page body */
 main {
   max-width: 960px;
   margin: 2rem auto;
@@ -166,7 +198,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Homepage grid */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
@@ -190,7 +221,6 @@ footer {
   opacity: 0.9;
 }
 
-/* Homepage button colours */
 .mcom-button       { background-color: #00274D; }
 .strategic-button  { background-color: #3b5f8a; }
 .insight-button    { background-color: #6a5acd; }
@@ -201,7 +231,6 @@ footer {
 .internal-button   { background-color: #556b6f; }
 .about-button      { background-color: #708090; }
 
-/* Community special button */
 .community-button {
   display: block;
   width: auto;
@@ -219,7 +248,6 @@ footer {
   opacity: 0.9;
 }
 
-/* Section buttons */
 .tas-button {
   background-color: #3b5f8a;
   color: white;
@@ -238,7 +266,6 @@ footer {
   opacity: 0.95;
 }
 
-/* GCS external link button */
 .gcs-button {
   background-color: #2E7D32;
   color: white;
@@ -257,7 +284,6 @@ footer {
   opacity: 0.95;
 }
 
-/* Internal resource button */
 .assist-button {
   background-color: #3f6fa0;
   color: white;
@@ -276,7 +302,6 @@ footer {
   opacity: 0.95;
 }
 
-/* Stacked rows of buttons */
 .button-container {
   display: flex;
   flex-direction: column;
@@ -290,31 +315,10 @@ footer {
   justify-content: center;
 }
 
-/* Iframe wrapper */
 .iframe-box {
   border: 4px solid #00274D;
   border-radius: 8px;
   padding: 0.5rem;
   margin: 1.5rem 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .header-bar {
-    flex-direction: column;
-    align-items: center;
-    padding: 14px 10px;
-  }
-
-  .header-logo {
-    position: static;
-    transform: none;
-    margin-bottom: 6px;
-  }
-
-  .header-bar h1 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
 }
