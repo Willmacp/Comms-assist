@@ -1,66 +1,59 @@
-
 #ai-chat-icon {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
-  background: #3f6fa0;
+  background-color: #3b5f8a;
   border-radius: 50%;
+  padding: 12px;
   cursor: pointer;
   z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 #ai-chat-icon img {
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
 }
 
 #ai-chat-box {
   position: fixed;
-  bottom: 90px;
+  bottom: 80px;
   right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  width: 320px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   display: none;
   flex-direction: column;
   z-index: 9999;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-#ai-chat-header {
-  background: #3f6fa0;
+.chat-header {
+  background-color: #3b5f8a;
   color: white;
-  padding: 10px;
-  font-weight: bold;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  text-align: center;
+  padding: 12px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
-#ai-chat-body {
-  padding: 10px;
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chat-body {
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #333;
+  max-height: 300px;
   overflow-y: auto;
-  max-height: 340px;
-}
-
-.ai-chat-message {
-  margin: 5px 0;
-  padding: 8px 12px;
-  border-radius: 6px;
-}
-
-.ai-chat-message.bot {
-  background: #e6f0fa;
-  align-self: flex-start;
-}
-
-.ai-chat-message.user {
-  background: #d0ebd0;
-  align-self: flex-end;
+  line-height: 1.4;
 }
