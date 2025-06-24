@@ -18,18 +18,13 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header title/logo row */
+/* Header bar and logo */
 .header-bar {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
-}
-
-.header-bar h1 {
-  color: white;
-  font-size: 1.8rem;
-  margin: 0;
+  position: relative;
 }
 
 .header-logo {
@@ -44,6 +39,13 @@ body {
 .header-logo img {
   max-height: 70px;
   width: auto;
+}
+
+/* Header title */
+.header-bar h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
 }
 
 .header-title-link {
@@ -133,7 +135,7 @@ body {
   display: block;
 }
 
-/* Mobile tweaks */
+/* Responsive styles */
 @media (max-width: 768px) {
   .header-bar {
     flex-direction: column;
@@ -191,6 +193,7 @@ body.mcom .header-wrapper        { background-color: #00274D !important; }
   color: white !important;
 }
 
+/* Main content layout */
 main {
   max-width: 960px;
   margin: 2rem auto;
@@ -223,6 +226,7 @@ footer {
   margin-top: 2rem;
 }
 
+/* Buttons and layout */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
