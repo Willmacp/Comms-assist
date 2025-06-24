@@ -135,7 +135,7 @@ body {
   display: block;
 }
 
-/* Responsive styles */
+/* Mobile styles */
 @media (max-width: 768px) {
   .header-bar {
     flex-direction: column;
@@ -156,14 +156,13 @@ body {
 
   .hamburger {
     display: flex;
-      flex-direction: column;
-  cursor: pointer;
-  margin: 0;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-}
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
   }
 
   .menu-buttons {
@@ -182,6 +181,20 @@ body {
     position: static;
     box-shadow: none;
     border-radius: 0;
+  }
+}
+
+/* Restore desktop layout */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none !important;
+    position: static;
+    transform: none;
+    margin: 0 20px;
+  }
+
+  .menu-buttons {
+    display: flex !important;
   }
 }
 
@@ -234,7 +247,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Buttons and layout */
+/* Button and layout styling */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
