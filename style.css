@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 230px; /* Adjust if needed for header + menu height */
+  padding-top: 250px; /* Adjust if needed for header + menu height */
 }
 
 /* Combined fixed wrapper */
