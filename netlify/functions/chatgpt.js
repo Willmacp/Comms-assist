@@ -30,3 +30,6 @@ exports.handler = async function (event, context) {
   }
 };
 
+Add OpenAI serverless function for AI assistant
+
+
