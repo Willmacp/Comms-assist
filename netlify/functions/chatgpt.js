@@ -1,45 +1,37 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async (event, context) => {
-  const { OPENAI_API_KEY } = process.env;
+export default async (req, res) => {
+  const { message } = req.body;
 
-  const body = JSON.parse(event.body || '{}');
-  const userPrompt = body.prompt;
+  const prompt = `
+You are a helpful assistant for Tasmanian Government communications professionals. You specialise in campaign planning, stakeholder engagement, and the UK Government Communication Service (GCS) frameworks, including OASIS and MCOM.
 
-  if (!userPrompt) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ error: 'No prompt provided' }),
-    };
-  }
+User question: ${message}
+`;
 
   try {
-    const openaiRes = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${OPENAI_API_KEY}`,
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
-        messages: [{ role: 'user', content: userPrompt }],
-        max_tokens: 300
-      })
+        messages: [{ role: 'user', content: prompt }],
+        max_tokens: 300,
+      }),
     });
 
-    const data = await openaiRes.json();
+    const data = await response.json();
 
-    const aiReply = data.choices?.[0]?.message?.content || 'No response received.';
-
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ reply: aiReply })
-    };
+    if (data.choices && data.choices.length > 0) {
+      return res.status(200).json({ reply: data.choices[0].message.content });
+    } else {
+      return res.status(500).json({ reply: "No response from OpenAI." });
+    }
   } catch (error) {
-    console.error('AI request failed:', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Something went wrong with OpenAI' })
-    };
+    console.error('Error:', error);
+    return res.status(500).json({ reply: "Server error while fetching AI response." });
   }
 };
