@@ -1,8 +1,10 @@
+/* JS injected at top of CSS (unusual, but works in this context) */
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.getElementById('chat-widget-container');
-
   container.innerHTML = `
-    <div id="ai-chat-icon" title="Need help?">AI Assist</div>
+    <div id="ai-chat-icon" title="Need help?">
+      <img src="assets/ai-icon.png" alt="AI Assistant" />
+    </div>
     <div id="ai-chat-box">
       <div class="chat-header">
         <strong>Comms Assist AI</strong>
@@ -22,10 +24,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('ai-chat-icon').addEventListener('click', toggleChat);
 });
-
-function toggleChat() {
-  const chatBox = document.getElementById('ai-chat-box');
-  if (chatBox) {
-    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
-  }
-}
