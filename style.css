@@ -20,6 +20,7 @@ body {
 
 /* Header title/logo row */
 .header-bar {
+    position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
