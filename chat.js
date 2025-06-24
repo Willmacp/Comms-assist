@@ -1,4 +1,3 @@
-/* JS injected at top of CSS (unusual, but works in this context) */
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.getElementById('chat-widget-container');
   container.innerHTML = `
@@ -24,3 +23,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   document.getElementById('ai-chat-icon').addEventListener('click', toggleChat);
 });
+
+function toggleChat() {
+  const chatBox = document.getElementById('ai-chat-box');
+  chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+}
