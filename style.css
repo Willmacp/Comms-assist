@@ -73,7 +73,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #e0e0e0;
+  background-color: inherit;
   padding: 10px;
   gap: 12px;
 }
