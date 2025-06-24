@@ -4,7 +4,7 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 140px; /* Adjust depending on header height */
+  padding-top: 180px; /* Adjust depending on header/menu height */
 }
 
 /* Header */
@@ -15,7 +15,7 @@ body {
   width: 100%;
   z-index: 1000;
   background-color: inherit;
-  padding: 20px 0;
+  padding: 20px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .header-bar.shrink {
-  padding: 10px 0;
+  padding: 10px 0 0 0;
 }
 
 .header-bar h1 {
@@ -70,12 +70,16 @@ body {
 
 /* Menu buttons */
 .menu-buttons {
+  position: fixed;
+  top: 90px; /* Directly below .header-bar height */
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: inherit;
+  background-color: #4A6A9A;
   padding: 10px;
   gap: 12px;
+  z-index: 999;
 }
 
 .dropdown {
@@ -316,7 +320,7 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   .header-bar {
     flex-direction: column;
     align-items: center;
-    padding: 14px 10px;
+    padding: 14px 10px 0 10px;
   }
 
   .header-logo {
@@ -328,5 +332,11 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   .header-bar h1 {
     text-align: center;
     font-size: 1.4rem;
+  }
+
+  .menu-buttons {
+    top: 110px;
+    flex-direction: column;
+    align-items: center;
   }
 }
