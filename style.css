@@ -1,13 +1,13 @@
-body { 
+body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 180px; /* Adjust depending on header/menu height */
+  padding-top: 180px; /* Adjusted for fixed header + menu */
 }
 
-/* Header */
+/* Header bar */
 .header-bar {
   position: fixed;
   top: 0;
@@ -15,27 +15,11 @@ body {
   width: 100%;
   z-index: 1000;
   background-color: inherit;
-  padding: 20px 0 0 0;
+  padding: 20px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: padding 0.3s ease;
-}
-
-.header-bar.shrink {
-  padding: 10px 0 0 0;
-}
-
-.header-bar h1 {
-  color: white;
-  font-size: 1.8rem;
-  margin: 0;
-  transition: font-size 0.3s ease;
-}
-
-.header-bar.shrink h1 {
-  font-size: 1.5rem;
 }
 
 .header-logo {
@@ -50,36 +34,36 @@ body {
 .header-logo img {
   max-height: 70px;
   width: auto;
-  transition: max-height 0.3s ease;
 }
 
-.header-bar.shrink .header-logo img {
-  max-height: 50px;
-}
-
-/* Make title a subtle link */
 .header-title-link {
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
 }
 
 .header-title-link:hover {
   opacity: 0.85;
 }
 
-/* Menu buttons */
+.header-bar h1 {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+/* Menu styling */
 .menu-buttons {
   position: fixed;
-  top: 90px; /* Directly below .header-bar height */
+  top: 100px; /* sits right under the header */
+  left: 0;
   width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: #4A6A9A;
+  background-color: #e0e0e0;
   padding: 10px;
   gap: 12px;
-  z-index: 999;
 }
 
 .dropdown {
@@ -96,9 +80,12 @@ body {
   border-radius: 8px;
   text-align: center;
   font-weight: bold;
-  line-height: 1.2;
   display: inline-block;
   width: 180px;
+}
+
+.menu-buttons a:hover {
+  background-color: #999999;
 }
 
 .dropdown-content {
@@ -129,16 +116,12 @@ body {
   display: block;
 }
 
-.menu-buttons a:hover {
-  background-color: #999999;
-}
-
 /* Page body */
 main {
   max-width: 960px;
   margin: 2rem auto;
   padding: 0 1rem;
-  background: white !important;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -166,7 +149,7 @@ footer {
   margin-top: 2rem;
 }
 
-/* Homepage grid */
+/* Homepage grid buttons */
 .button-grid {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +184,6 @@ footer {
 .internal-button   { background-color: #556b6f; }
 .about-button      { background-color: #708090; }
 
-/* Community special button */
 .community-button {
   display: block;
   width: auto;
@@ -219,7 +201,7 @@ footer {
   opacity: 0.9;
 }
 
-/* Page-specific header backgrounds */
+/* Page-specific header colours */
 body.strategic .header-bar   { background-color: #3b5f8a !important; }
 body.insight .header-bar     { background-color: #6a5acd !important; }
 body.media .header-bar       { background-color: #457a5b !important; }
@@ -230,15 +212,12 @@ body.about .header-bar       { background-color: #708090 !important; }
 body.directory .header-bar   { background-color: #2F4F4F !important; }
 body.mcom .header-bar        { background-color: #00274D !important; }
 
-/* Force header text white */
 .header-bar, .header-bar a, .header-bar nav a {
   color: white !important;
 }
 
-/* Section buttons */
-.tas-button {
-  background-color: #3b5f8a;
-  color: white;
+/* Section-level buttons */
+.tas-button, .gcs-button, .assist-button {
   padding: 1rem;
   text-decoration: none;
   border-radius: 6px;
@@ -247,52 +226,18 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   text-align: center;
   min-width: 180px;
   margin: 0.5rem;
-}
-
-.tas-button:hover {
-  background-color: #2e4b6c;
-  opacity: 0.95;
-}
-
-/* GCS external link button */
-.gcs-button {
-  background-color: #2E7D32;
   color: white;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
 }
 
-.gcs-button:hover {
-  background-color: #256528;
-  opacity: 0.95;
-}
+.tas-button { background-color: #3b5f8a; }
+.tas-button:hover { background-color: #2e4b6c; opacity: 0.95; }
 
-/* Internal resource button */
-.assist-button {
-  background-color: #3f6fa0;
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
-}
+.gcs-button { background-color: #2E7D32; }
+.gcs-button:hover { background-color: #256528; opacity: 0.95; }
 
-.assist-button:hover {
-  background-color: #3a3a3a;
-  opacity: 0.95;
-}
+.assist-button { background-color: #3f6fa0; }
+.assist-button:hover { background-color: #3a3a3a; opacity: 0.95; }
 
-/* Stacked rows of buttons */
 .button-container {
   display: flex;
   flex-direction: column;
@@ -306,7 +251,6 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   justify-content: center;
 }
 
-/* Iframe wrapper */
 .iframe-box {
   border: 4px solid #00274D;
   border-radius: 8px;
@@ -315,12 +259,12 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive adjustments */
+/* Mobile adjustments */
 @media (max-width: 600px) {
   .header-bar {
     flex-direction: column;
     align-items: center;
-    padding: 14px 10px 0 10px;
+    padding: 14px 10px;
   }
 
   .header-logo {
@@ -332,11 +276,5 @@ body.mcom .header-bar        { background-color: #00274D !important; }
   .header-bar h1 {
     text-align: center;
     font-size: 1.4rem;
-  }
-
-  .menu-buttons {
-    top: 110px;
-    flex-direction: column;
-    align-items: center;
   }
 }
