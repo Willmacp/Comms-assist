@@ -57,3 +57,29 @@
   overflow-y: auto;
   line-height: 1.4;
 }
+.chat-input {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 6px;
+}
+
+.chat-input button {
+  padding: 6px 12px;
+  font-weight: bold;
+  background-color: #3b5f8a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
