@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   container.innerHTML = `
     <div id="ai-chat-icon" title="Need help?">
-      <img src="ai-chat-icon" alt="AI Assistant" />
+      <img src="assets/tas-gov-logo.png" alt="AI Assistant" />
     </div>
     <div id="ai-chat-box">
       <div class="chat-header">
