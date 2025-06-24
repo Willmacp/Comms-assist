@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Comms Assist | TasGov Communications Hub</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="chat.css">
-  <script defer src="chat.js"></script>
+  <link rel="stylesheet" href="chat.css" />
 </head>
+
 <body class="mcom">
+  <!-- Header -->
   <div id="header-placeholder"></div>
   <script>
     fetch("header.html")
@@ -18,6 +19,7 @@
       });
   </script>
 
+  <!-- Main content -->
   <main>
     <section>
       <h2>Welcome to Comms Assist</h2>
@@ -39,6 +41,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>Developed for Tasmanian Government communicators using frameworks from the UK Government Communication Service (GCS), adapted for local use.<br/>
     This resource will grow through cross-agency contribution and shared insight.<br/>
@@ -47,8 +50,11 @@
     </p>
   </footer>
 
-  <!-- Required scripts and containers -->
-  <script src="menu.js"></script>
+  <!-- Chat widget container (must be before chat.js) -->
   <div id="chat-widget-container"></div>
+
+  <!-- Scripts -->
+  <script src="menu.js"></script>
+  <script defer src="chat.js"></script>
 </body>
 </html>
