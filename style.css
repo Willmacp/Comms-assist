@@ -1,14 +1,11 @@
-/**
- * FULL CSS with hamburger menu for mobile view
- */
-
+/* Comms Assist CSS */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
-  padding-top: 180px; /* Adjust for header + menu height */
+  padding-top: 160px;
 }
 
 .header-wrapper {
@@ -56,6 +53,25 @@ body {
 
 .header-title-link:hover {
   opacity: 0.85;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
 }
 
 .menu-buttons {
@@ -118,40 +134,6 @@ body {
   display: block;
 }
 
-/* Hamburger button */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 18px;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger div {
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-@media (max-width: 768px) {
-  .menu-buttons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-  }
-  .menu-buttons.show {
-    display: flex;
-  }
-  .hamburger {
-    display: flex;
-  }
-}
-
 body.strategic .header-wrapper   { background-color: #3b5f8a !important; }
 body.insight .header-wrapper     { background-color: #6a5acd !important; }
 body.media .header-wrapper       { background-color: #457a5b !important; }
@@ -166,159 +148,38 @@ body.mcom .header-wrapper        { background-color: #00274D !important; }
   color: white !important;
 }
 
-main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: white !important;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
+@media (max-width: 768px) {
+  .header-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 10px;
+  }
 
-section {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
+  .header-logo {
+    position: static;
+    transform: none;
+    margin-bottom: 6px;
+  }
 
-h2, h3 {
-  color: #003366;
-}
+  .header-bar h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 
-.text-box {
-  background-color: #e6f0fa;
-  padding: 1rem;
-  border-radius: 6px;
-  margin: 1rem 0;
-}
+  .hamburger {
+    display: flex;
+  }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #f0f0f0;
-  margin-top: 2rem;
-}
+  .menu-buttons {
+    flex-direction: column;
+    display: none;
+  }
 
-.button-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
+  .menu-buttons.show {
+    display: flex;
+  }
 
-.button-grid a {
-  flex: 1 1 200px;
-  text-align: center;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: opacity 0.3s ease;
-  color: white;
-}
-
-.button-grid a:hover {
-  opacity: 0.9;
-}
-
-.mcom-button       { background-color: #00274D; }
-.strategic-button  { background-color: #3b5f8a; }
-.insight-button    { background-color: #6a5acd; }
-.evaluation-button { background-color: #566d99; }
-.branding-button   { background-color: #3f6fa0; }
-.media-button      { background-color: #457a5b; }
-.directory-button  { background-color: #2F4F4F; }
-.internal-button   { background-color: #556b6f; }
-.about-button      { background-color: #708090; }
-
-.community-button {
-  display: block;
-  width: auto;
-  text-align: center;
-  padding: 1rem;
-  background-color: #009688;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 1rem;
-}
-
-.community-button:hover {
-  opacity: 0.9;
-}
-
-.tas-button {
-  background-color: #3b5f8a;
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
-}
-
-.tas-button:hover {
-  background-color: #2e4b6c;
-  opacity: 0.95;
-}
-
-.gcs-button {
-  background-color: #2E7D32;
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
-}
-
-.gcs-button:hover {
-  background-color: #256528;
-  opacity: 0.95;
-}
-
-.assist-button {
-  background-color: #3f6fa0;
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 6px;
-  display: inline-block;
-  font-weight: bold;
-  text-align: center;
-  min-width: 180px;
-  margin: 0.5rem;
-}
-
-.assist-button:hover {
-  background-color: #3a3a3a;
-  opacity: 0.95;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-}
-
-.button-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.iframe-box {
-  border: 4px solid #00274D;
-  border-radius: 8px;
-  padding: 0.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  .dropdown-content {
+    position: relative;
+  }
 }
