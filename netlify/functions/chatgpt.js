@@ -20,7 +20,17 @@ export default async function handler(req) {
 
     const data = await response.json();
 
-    return new Response(JSON.stringify({ reply: data.choices[0].message.content }), {
+    const reply = data?.choices?.[0]?.message?.content;
+
+    if (!reply) {
+      console.error("Invalid OpenAI response format:", data);
+      return new Response(JSON.stringify({ reply: "Sorry, I couldn’t generate a response just now." }), {
+        status: 502,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+
+    return new Response(JSON.stringify({ reply }), {
       status: 200,
       headers: { "Content-Type": "application/json" }
     });
@@ -28,7 +38,7 @@ export default async function handler(req) {
   } catch (err) {
     console.error("OpenAI API Error:", err);
 
-    return new Response(JSON.stringify({ reply: "Sorry, something went wrong while getting the AI response." }), {
+    return new Response(JSON.stringify({ reply: "Sorry, something went wrong while contacting the AI service." }), {
       status: 500,
       headers: { "Content-Type": "application/json" }
     });
