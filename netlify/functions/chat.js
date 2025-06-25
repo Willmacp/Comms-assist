@@ -1,26 +1,36 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-exports.handler = async function(event) {
-  const body = JSON.parse(event.body);
-  const userMessage = body.message;
+export default async function handler(req) {
+  try {
+    const body = await req.json();
+    const userMessage = body.message;
 
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "gpt-4",
-      messages: [{ role: "user", content: userMessage }],
-      temperature: 0.7
-    })
-  });
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        model: "gpt-4",
+        messages: [{ role: "user", content: userMessage }],
+        temperature: 0.7
+      })
+    });
 
-  const data = await response.json();
+    const data = await response.json();
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ reply: data.choices[0].message.content })
-  };
-};
+    return new Response(JSON.stringify({ reply: data.choices[0].message.content }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
+
+  } catch (err) {
+    console.error("OpenAI API Error:", err);
+
+    return new Response(JSON.stringify({ reply: "Sorry, something went wrong while getting the AI response." }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+}
