@@ -1,48 +1,38 @@
 import fetch from 'node-fetch';
 
-const handler = async (event) => {
+export default async function handler(req) {
   try {
-    const { message } = JSON.parse(event.body);
-
-    const apiKey = process.env.OPENAI_API_KEY;
+    const body = await req.json();
+    const userMsg = body.message;
 
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: [
-          {
-            role: 'system',
-            content: 'You are a helpful assistant for government communicators in Tasmania, Australia. Use clear, practical language. Reference known frameworks like OASIS, MCOM, GCS, IAP2, etc. Answer with helpful suggestions and page links if possible.',
-          },
-          {
-            role: 'user',
-            content: message,
-          },
+          { role: 'system', content: 'You are a helpful assistant for Tasmanian Government communicators. Keep responses short, friendly, and relevant to public sector campaigns.' },
+          { role: 'user', content: userMsg }
         ],
-        max_tokens: 300,
-        temperature: 0.7,
-      }),
+        temperature: 0.7
+      })
     });
 
-    const data = await response.json();
-    const reply = data.choices?.[0]?.message?.content || "Sorry, I couldn’t generate a response.";
+    const data = await response.json(); // ✅ this is the correct way to get the JSON
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ reply }),
-    };
-  } catch (error) {
-    console.error("OpenAI API Error:", error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: 'Something went wrong.' }),
-    };
+    return new Response(JSON.stringify({ reply: data.choices[0].message.content }), {
+      headers: { 'Content-Type': 'application/json' }
+    });
+
+  } catch (err) {
+    console.error('OpenAI API Error:', err);
+
+    return new Response(JSON.stringify({ reply: "Sorry, something went wrong while getting the AI response." }), {
+      headers: { 'Content-Type': 'application/json' },
+      status: 500
+    });
   }
-};
-
-export { handler as default };
+}
