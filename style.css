@@ -1,3 +1,4 @@
+/* ========== BASE STYLES ========== */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -7,7 +8,25 @@ body {
   padding-top: 180px;
 }
 
-/* Combined fixed wrapper */
+main {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+section {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+h2, h3 {
+  color: #003366;
+}
+
+/* ========== HEADER ========== */
 .header-wrapper {
   position: fixed;
   top: 0;
@@ -18,7 +37,6 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header bar and logo */
 .header-bar {
   display: flex;
   align-items: center;
@@ -41,7 +59,6 @@ body {
   width: auto;
 }
 
-/* Header title */
 .header-bar h1 {
   color: white;
   font-size: 1.8rem;
@@ -57,24 +74,11 @@ body {
   opacity: 0.85;
 }
 
-/* Hamburger icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 20px;
+.header-bar, .header-bar a, .header-bar nav a {
+  color: white !important;
 }
 
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-  transition: 0.4s;
-}
-
-/* Menu bar */
+/* ========== MENU ========== */
 .menu-buttons {
   display: flex;
   justify-content: center;
@@ -135,7 +139,46 @@ body {
   display: block;
 }
 
-/* Mobile styles */
+/* ========== TABLE STYLING ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #003366;
+  color: #fff;
+}
+
+thead th {
+  text-align: left;
+  padding: 14px 20px;
+  font-size: 1rem;
+}
+
+tbody td {
+  padding: 14px 20px;
+  border-top: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 5-column fix */
+table th:nth-child(1), table td:nth-child(1) { width: 22%; }
+table th:nth-child(2), table td:nth-child(2) { width: 20%; }
+table th:nth-child(3), table td:nth-child(3) { width: 25%; word-break: break-word; }
+table th:nth-child(4), table td:nth-child(4) { width: 13%; white-space: nowrap; }
+table th:nth-child(5), table td:nth-child(5) { width: 20%; word-break: break-word; }
+
+/* ========== MOBILE TABLE ========== */
 @media (max-width: 768px) {
   .header-bar {
     flex-direction: column;
@@ -152,35 +195,6 @@ body {
   .header-bar h1 {
     font-size: 1.4rem;
     text-align: center;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 0;
-  }
-
-  .menu-buttons {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f4;
-    padding: 10px;
-  }
-
-  .menu-buttons.show {
-    display: flex;
-  }
-
-  .dropdown-content {
-    position: static;
-    box-shadow: none;
-    border-radius: 0;
   }
 
   table, thead, tbody, th, td, tr {
@@ -220,21 +234,76 @@ body {
   }
 }
 
-/* Restore desktop layout */
-@media (min-width: 769px) {
-  .hamburger {
-    display: none !important;
-    position: static;
-    transform: none;
-    margin: 0 20px;
-  }
-
-  .menu-buttons {
-    display: flex !important;
-  }
+/* ========== BUTTON STYLING ========== */
+.tas-button {
+  background-color: #3b5f8a;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  margin: 0.5rem;
 }
 
-/* Page-specific header backgrounds */
+.tas-button:hover {
+  background-color: #2e4b6c;
+  opacity: 0.95;
+}
+
+.gcs-button {
+  background-color: #457a5b;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  margin: 0.5rem;
+}
+
+.gcs-button:hover {
+  background-color: #256528;
+  opacity: 0.95;
+}
+
+.assist-button {
+  background-color: #556b6f;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  min-width: 180px;
+  margin: 0.5rem;
+}
+
+.assist-button:hover {
+  background-color: #3a3a3a;
+  opacity: 0.95;
+}
+
+/* ========== BRANDING TILE COLOURS ========== */
+.pastel-blue   { background-color: #e6effa; }
+.pastel-slate  { background-color: #edf0f3; }
+.pastel-teal   { background-color: #e0f4f2; }
+.pastel-green  { background-color: #e4f3e9; }
+.pastel-grey   { background-color: #f3f3f3; }
+.pastel-navy   { background-color: #e9eef5; }
+
+.directory-card img {
+  max-height: 40px;
+  margin-bottom: 1rem;
+  filter: grayscale(100%) brightness(0);
+}
+
+/* ========== HEADER BACKGROUNDS ========== */
 body.strategic .header-wrapper   { background-color: #3b5f8a !important; }
 body.insight .header-wrapper     { background-color: #6a5acd !important; }
 body.media .header-wrapper       { background-color: #457a5b !important; }
@@ -244,130 +313,3 @@ body.branding .header-wrapper    { background-color: #3f6fa0 !important; }
 body.about .header-wrapper       { background-color: #708090 !important; }
 body.directory .header-wrapper   { background-color: #2F4F4F !important; }
 body.mcom .header-wrapper        { background-color: #00274D !important; }
-
-/* Force white text in header */
-.header-bar, .header-bar a, .header-bar nav a {
-  color: white !important;
-}
-
-/* Main content layout */
-main {
-  max-width: 960px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-section {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
-
-h2, h3 {
-  color: #003366;
-}
-
-/* Styled table for Department Directory */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 30px;
-  background-color: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-thead {
-  background-color: #003366;
-  color: #fff;
-}
-
-thead th {
-  text-align: left;
-  padding: 14px 20px;
-  font-size: 1rem;
-}
-
-tbody td {
-  padding: 14px 20px;
-  border-top: 1px solid #e0e0e0;
-  vertical-align: top;
-}
-
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Adjust column widths for 5-column layout */
-table th:nth-child(1),
-table td:nth-child(1) {
-  width: 22%;
-}
-
-table th:nth-child(2),
-table td:nth-child(2) {
-  width: 20%;
-}
-
-table th:nth-child(3),
-table td:nth-child(3) {
-  width: 25%;
-  word-break: break-word;
-}
-
-table th:nth-child(4),
-table td:nth-child(4) {
-  width: 13%;
-  white-space: nowrap;
-}
-
-table th:nth-child(5),
-table td:nth-child(5) {
-  width: 20%;
-  word-break: break-word;
-}
-
-/* Directory grid for cards (if used elsewhere) */
-.directory-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.directory-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.2rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.directory-card:hover {
-  transform: translateY(-3px);
-}
-
-.directory-card img {
-  max-height: 40px;
-  margin-bottom: 1rem;
-  filter: grayscale(100%) brightness(0);
-}
-
-.directory-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-  color: #003366;
-}
-
-.directory-card a {
-  color: #003366;
-  text-decoration: none;
-}
-
-.directory-card a:hover {
-  text-decoration: underline;
-}
