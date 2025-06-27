@@ -479,4 +479,51 @@ tbody tr:nth-child(even) {
 .directory-card a:hover {
   text-decoration: underline;
 }
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.directory-card {
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  background-color: #f0f0f0; /* fallback */
+}
+
+.directory-card:hover {
+  transform: translateY(-4px);
+}
+
+.directory-card img {
+  max-height: 40px;
+  margin-bottom: 1rem;
+}
+
+.directory-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #003366;
+}
+
+.directory-card a {
+  color: #003366;
+  text-decoration: none;
+}
+
+.directory-card a:hover {
+  text-decoration: underline;
+}
+
+/* Pastel palette referencing index buttons */
+.pastel-blue   { background-color: #e6effa; }  /* for strategic-button */
+.pastel-slate  { background-color: #edf0f3; }  /* for branding-button */
+.pastel-teal   { background-color: #e0f4f2; }  /* for community-button */
+.pastel-green  { background-color: #e4f3e9; }  /* for media-button */
+.pastel-grey   { background-color: #f3f3f3; }  /* fallback/default */
+.pastel-navy   { background-color: #e9eef5; }  /* for mcom-button */
 
