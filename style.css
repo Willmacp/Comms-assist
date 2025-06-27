@@ -313,3 +313,80 @@ body.branding .header-wrapper    { background-color: #3f6fa0 !important; }
 body.about .header-wrapper       { background-color: #708090 !important; }
 body.directory .header-wrapper   { background-color: #2F4F4F !important; }
 body.mcom .header-wrapper        { background-color: #00274D !important; }
+
+/* ========== HOMEPAGE BUTTON GRID ========== */
+.button-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.button-grid a {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Tile-specific pastel colours for homepage */
+.pastel-blue   { background-color: #e6effa; color: #003366; }
+.pastel-slate  { background-color: #edf0f3; color: #003366; }
+.pastel-teal   { background-color: #e0f4f2; color: #003366; }
+.pastel-green  { background-color: #e4f3e9; color: #003366; }
+.pastel-grey   { background-color: #f3f3f3; color: #003366; }
+.pastel-navy   { background-color: #e9eef5; color: #003366; }
+
+/* ========== BRANDING TILE FIX ========== */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.directory-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease;
+  height: auto;
+  min-height: 180px;
+}
+
+.directory-card:hover {
+  transform: translateY(-3px);
+}
+
+.directory-card img {
+  max-height: 40px;
+  margin-bottom: 1rem;
+  filter: grayscale(100%) brightness(0);
+}
+
+.directory-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #003366;
+}
+/* ========== IFRAME BOX STYLING ========== */
+.iframe-box {
+  border: 4px solid #00274D;
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
