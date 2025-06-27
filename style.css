@@ -529,6 +529,35 @@ tbody tr:nth-child(even) {
 
 .directory-card img {
   max-height: 40px;
+  /* Improve layout for department directory table */
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 20%;
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 20%;
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 25%;
+  word-break: break-word;
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+  width: 15%;
+  white-space: nowrap;
+}
+
+table th:nth-child(5),
+table td:nth-child(5) {
+  width: 20%;
+  word-break: break-word;
+}
+
   margin-bottom: 1rem;
   filter: grayscale(100%) brightness(0); /* makes logo black */
 }
