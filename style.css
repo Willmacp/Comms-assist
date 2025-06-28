@@ -532,3 +532,9 @@ tbody tr:nth-child(even) {
   margin-bottom: 1rem;
   filter: grayscale(100%) brightness(0); /* makes logo black */
 }
+/* Make phone column a bit wider */
+table td:nth-child(4),
+table th:nth-child(4) {
+  width: 160px; /* adjust as needed */
+  word-break: break-word;
+}
