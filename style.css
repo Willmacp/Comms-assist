@@ -415,3 +415,45 @@ table td:nth-child(3) {
     flex-basis: 40%;
   }
 }
+/* Branding Page Tile Styling */
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.directory-card {
+  background-color: #ffffff;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.directory-card img {
+  max-height: 60px;
+  margin-bottom: 1rem;
+}
+
+.directory-card h3 {
+  font-size: 1.1rem;
+  color: #003366;
+  margin-bottom: 0.6rem;
+}
+
+.directory-card p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+}
+
+.directory-card a {
+  color: #003366;
+  text-decoration: underline;
+}
+
+.pastel-blue  { background-color: #e0ecf9; }
+.pastel-slate { background-color: #dde1e8; }
+.pastel-teal  { background-color: #d9f0f2; }
+.pastel-green { background-color: #e1f4e3; }
+.pastel-navy  { background-color: #dbe7f3; }
