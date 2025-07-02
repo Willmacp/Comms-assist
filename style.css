@@ -459,3 +459,41 @@ table td:nth-child(3) {
 .pastel-teal  { background-color: #d9f0f2; }
 .pastel-green { background-color: #e1f4e3; }
 .pastel-navy  { background-color: #dbe7f3; }
+
+@media (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+
+  tbody td {
+    display: flex;
+    flex-direction: column;
+    padding: 6px 10px;
+    border: none;
+  }
+
+  tbody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 4px;
+  }
+
+  tbody td a {
+    word-wrap: break-word;
+  }
+}
