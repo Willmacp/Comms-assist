@@ -1,32 +1,25 @@
-// Render the chat widget HTML
 document.addEventListener('DOMContentLoaded', function () {
   const container = document.getElementById('chat-widget-container');
 
   container.innerHTML = `
-    <div id="ai-chat-icon" title="Need help?">
-      <div class="icon-text">AI Assist</div>
-    </div>
+    <div id="ai-chat-icon" title="Need help?">AI Assist</div>
     <div id="ai-chat-box">
       <div class="chat-header">
         <strong>Comms Assist AI</strong>
         <button onclick="toggleChat()">×</button>
       </div>
       <div class="chat-body" id="chat-body">
-        <div class="ai-msg">Hi! I’m here to help with Tasmanian Government communications.<br><br>
-        You can ask about topics like OASIS, strategic comms, evaluation, media, stakeholders, branding and more.
-        </div>
+        <p>Hello! I’m here to help with government communications.<br><br>
+        You can ask about any topic — from campaigns and insight to branding and strategic planning. I’ll do my best to guide you or link you to helpful resources.</p>
       </div>
       <div class="chat-input">
-        <input type="text" id="chat-input-field" placeholder="Ask me something..." />
-        <button onclick="handleSend()">Send</button>
+        <input type="text" id="user-input" placeholder="Type your question..." />
+        <button onclick="handleUserInput()">Ask</button>
       </div>
     </div>
   `;
 
   document.getElementById('ai-chat-icon').addEventListener('click', toggleChat);
-  document.getElementById('chat-input-field').addEventListener('keydown', function (e) {
-    if (e.key === 'Enter') handleSend();
-  });
 });
 
 function toggleChat() {
@@ -34,92 +27,82 @@ function toggleChat() {
   chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
 }
 
-async function handleSend() {
-  const input = document.getElementById('chat-input-field');
-  const message = input.value.trim();
-  if (!message) return;
+function handleUserInput() {
+  const input = document.getElementById('user-input').value.trim();
+  if (!input) return;
 
-  appendMessage('user', message);
-  input.value = '';
-  const response = await getAIResponse(message);
-  appendMessage('ai', response);
+  appendMessage(input, 'user');
+  document.getElementById('user-input').value = '';
+  getAIResponse(input);
 }
 
-function appendMessage(sender, text) {
-  const body = document.getElementById('chat-body');
+function appendMessage(message, type) {
+  const chatBody = document.getElementById('chat-body');
   const msg = document.createElement('div');
-  msg.className = sender === 'user' ? 'user-msg' : 'ai-msg';
-  msg.innerHTML = text;
-  body.appendChild(msg);
-  body.scrollTop = body.scrollHeight;
+  msg.classList.add(type === 'user' ? 'user-msg' : 'ai-msg');
+  msg.innerHTML = message;
+  chatBody.appendChild(msg);
+  chatBody.scrollTop = chatBody.scrollHeight;
 }
 
-async function getAIResponse(userMessage) {
-  const lowerMsg = userMessage.toLowerCase();
+function getAIResponse(userInput) {
+  const input = userInput.toLowerCase();
 
-  const keywords = [
-    {
-      keywords: ["media", "press", "journalist"],
-      reply: `Media guidance is available on the <a href="media-and-external-affairs.html">External Affairs</a> page.`
-    },
-    {
-      keywords: ["branding", "visual identity", "logos"],
-      reply: `For branding standards, visit the <a href="branding.html">Branding</a> section or check the <a href="https://www.tas.gov.au/communications" target="_blank">Tas Gov Comms site</a>.`
-    },
-    {
-      keywords: ["evaluation", "reporting", "results"],
-      reply: `Try the <a href="evaluation.html">Evaluation</a> page — it includes the GCS Evaluation Cycle and useful templates.`
-    },
-    {
-      keywords: ["insight", "data", "research"],
-      reply: `Explore sources and strategy advice on the <a href="insight.html">Insight</a> page.`
-    },
-    {
-      keywords: ["mcom", "model", "modern communications operating model"],
-      reply: `Read about the Modern Communications Operating Model (MCOM) <a href="mcom.html">here</a>.`
-    },
-    {
-      keywords: ["oasis", "planning", "framework"],
-      reply: `The <a href="https://gcs.civilservice.gov.uk/guidance/marketing/delivering-government-campaigns/guide-to-campaign-planning-oasis/" target="_blank">OASIS Framework</a> is the UK standard for campaign planning.`
-    },
-    {
-      keywords: ["strategy", "strategic comms", "objectives"],
-      reply: `Head to the <a href="strategic.html">Strategic Communications</a> section for guidance and examples.`
-    },
-    {
-      keywords: ["stakeholder", "community", "iap2"],
-      reply: `Try the <a href="stakeholder.html">Stakeholder Engagement</a> page — it covers IAP2 principles and GCS models.`
-    },
-    {
-      keywords: ["internal", "staff", "intranet"],
-      reply: `We’ve got internal communication guidance on the <a href="internal.html">Internal Comms</a> page.`
-    },
-    {
-      keywords: ["directory", "contacts", "comms leads"],
-      reply: `Our <a href="directory.html">Directory</a> lists government comms contacts and department links.`
-    }
-  ];
+  const responses = {
+    // 🧠 Strategic Comms
+    strategy: ["strategy", "strategic", "planning", "framework", "comms plan", "direction", "strategic communication", "high level", "objectives", "comms strategy", "structure", "goals", "priorities", "strategic delivery", "campaign planning", "foundations", "core focus", "approach", "positioning", "intent"],
+    insight: ["insight", "research", "audience", "survey", "data", "understand", "intel", "evidence", "findings", "community insight", "public view", "focus group", "sentiment", "social listening", "research methods", "population", "audience profiles", "attitudes", "behavioural insight", "RDAT"],
+    campaigns: ["campaign", "OASIS", "planning", "publicity", "promotion", "delivery", "messaging", "channel mix", "comms rollout", "launch", "audience targeting", "planning template", "advertising", "execution", "roll out", "public engagement", "timing", "paid media", "paid campaign", "media spend"],
+    evaluation: ["evaluation", "success", "metrics", "impact", "measure", "KPIs", "performance", "tracking", "results", "ROI", "GCS Evaluation", "survey results", "post-campaign", "lessons learned", "feedback", "what worked", "review", "outcomes", "GCS cycle", "measuring impact"],
+    behaviour: ["behaviour", "change", "COM-B", "EAST", "nudging", "influence", "shift", "action", "habit", "encourage", "persuade", "behavioural insight", "framework", "intervention", "COMB model", "motivation", "capability", "opportunity", "desired behaviour", "behavioural outcomes"],
 
-  for (const item of keywords) {
-    if (item.keywords.some(keyword => lowerMsg.includes(keyword))) {
-      return item.reply;
+    // 🎨 Branding / Digital
+    branding: ["branding", "visual identity", "brand", "logo", "font", "design", "colours", "brand tasmania", "templates", "kits", "style guide", "consistent look", "identity", "design system", "layout", "design approval", "digital style", "visual hierarchy", "image use", "pre-approved assets"],
+    digital: ["digital", "website", "online", "social media", "channels", "platforms", "email", "web", "interface", "UI", "engagement online", "posts", "content", "facebook", "twitter", "instagram", "linkedin", "meta", "analytics", "online strategy"],
+    accessibility: ["accessibility", "inclusive", "WCAG", "readability", "easy read", "inclusive design", "disability", "diverse needs", "plain english", "screen reader", "colour contrast", "legibility", "accessibility standards", "accessible formats", "captioning", "alt text", "Tas Gov accessibility", "universal access", "inclusive communication", "inclusive content"],
+
+    // 📣 Media & Stakeholders
+    media: ["media", "press", "journalist", "spokesperson", "response", "interview", "release", "statement", "TV", "radio", "print", "news", "coverage", "media strategy", "crisis comms", "reputation", "public image", "scrutiny", "reporting", "press kit"],
+    stakeholder: ["stakeholder", "engagement", "consultation", "audience", "advocates", "third party", "supporters", "opinion leader", "community", "collaboration", "interest group", "external", "internal", "working group", "public", "liaison", "champion", "IAP2", "public involvement", "stakeholder map"],
+    partnerships: ["partner", "partnership", "collaborator", "alliances", "third party", "external support", "joint comms", "influencer", "local leader", "messenger", "shared campaign", "co-brand", "community leader", "reputation partner", "endorsement", "amplify", "co-sponsor", "multipliers", "peer network", "sector support", "joint statement"],
+
+    // 🧩 Internal / Community / Governance
+    internal: ["internal", "staff", "employee", "intranet", "email", "staff update", "team news", "internal channels", "internal messaging", "workforce", "HR comms", "internal audience", "internal newsletter", "comms to staff", "employee engagement", "CEO message", "culture", "values", "corporate comms", "internal cascade"],
+    community: ["community", "networking", "training", "events", "development", "skills", "peer support", "connections", "collaboration", "learning", "knowledge", "webinar", "masterclass", "support", "group", "mentorship", "feedback", "comm share", "internal forum", "showcase"],
+    governance: ["governance", "approval", "sign off", "process", "rules", "policy", "oversight", "GCS standards", "internal approvals", "campaign signoff", "legal", "review", "checks", "internal governance", "safeguards", "framework", "escalation", "protocol", "compliance", "procedures"],
+
+    // 📂 Other Sections
+    mcom: ["mcom", "modern model", "modern comms", "structure", "operating model", "teams", "workstream", "collaboration", "central function", "discipline", "capability", "structure model", "GCS MCOM", "GCS operating model", "functions", "shared services", "coordination", "comms maturity", "whole of gov", "modernise"],
+    directory: ["directory", "contact", "who to call", "department", "email", "comms lead", "gov team", "point of contact", "agency", "directory list", "comms email", "who handles", "media contact", "stakeholder contact", "gov contact", "internal", "external", "helpline", "network"],
+    starter: ["starter kit", "templates", "new agency", "small team", "download", "pack", "help me start", "resources", "ready to go", "bootstrap", "materials", "campaign starter", "word doc", "excel", "tools", "easy setup", "pre-filled", "simple toolkit", "setup help", "onboarding"]
+  };
+
+  const urls = {
+    strategy: "strategic.html",
+    insight: "insight.html",
+    campaigns: "campaigns.html",
+    evaluation: "evaluation.html",
+    behaviour: "behaviour.html",
+    branding: "branding.html",
+    digital: "digital.html",
+    accessibility: "accessibility.html",
+    media: "media-and-external-affairs.html",
+    stakeholder: "stakeholder-engagement.html",
+    partnerships: "partnerships.html",
+    internal: "internal.html",
+    community: "community.html",
+    governance: "governance.html",
+    mcom: "mcom.html",
+    directory: "directory.html",
+    starter: "starter-kit.html"
+  };
+
+  for (let topic in responses) {
+    if (responses[topic].some(keyword => userInput.toLowerCase().includes(keyword))) {
+      appendMessage(`That’s covered in our <a href="${urls[topic]}" target="_blank">${topic.charAt(0).toUpperCase() + topic.slice(1)} section</a>.`, 'ai');
+      return;
     }
   }
 
-  // No match, fall back to OpenAI
-  try {
-    const response = await fetch('/.netlify/functions/chatgpt', {
-      method: 'POST',
-      body: JSON.stringify({ message: userMessage }),
-      headers: { 'Content-Type': 'application/json' }
-    });
-
-    if (!response.ok) throw new Error("API response error");
-
-    const data = await response.json();
-    return data.reply || "I'm not sure how to help with that, but I’m learning!";
-  } catch (err) {
-    console.error(err);
-    return "No response received. Please try again later.";
-  }
+  appendMessage(`Sorry, I couldn’t find a match for that. Would you like to <a href="strategic.html">start with our Strategic Comms guidance</a>?`, 'ai');
 }
