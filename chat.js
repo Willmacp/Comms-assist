@@ -42,6 +42,7 @@ function toggleChat() {
 async function handleChat() {
   const input = document.getElementById('chat-input').value.trim();
   if (!input) return;
+  document.getElementById('chat-input').value = '';
 
   const chatBody = document.getElementById('chat-body');
   appendMessage(input, 'user-msg');
